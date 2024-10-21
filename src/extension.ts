@@ -8,7 +8,7 @@ import { checkIfUpdateCli } from './utils/updater.js';
 // let fileWatchers: FileWatchers | undefined;
 let textEditorWatchers: TextEditorWatchers | undefined;
 export function activateExtension(context: vscode.ExtensionContext) {
-  logger.log('Zova-vscode is active');
+  logger.log('Vona-vscode is active');
 
   const commands = new Commands(context);
   commands.initialize();

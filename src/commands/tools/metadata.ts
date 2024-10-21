@@ -2,8 +2,8 @@ import { Uri, window } from 'vscode';
 import {
   extractCommandPathInfo,
   preparePathResource,
-} from '../../utils/zova.js';
-import { invokeZovaCli } from '../../utils/commands.js';
+} from '../../utils/vona.js';
+import { invokeVonaCli } from '../../utils/commands.js';
 import path from 'node:path';
 import { showTextDocument } from '../../utils/global.js';
 
@@ -18,7 +18,7 @@ export async function toolsIcon(resource?: Uri) {
     return;
   }
   // invoke
-  await invokeZovaCli(
+  await invokeVonaCli(
     [':tools:icon', commandPathInfo.moduleName],
     commandPathInfo.projectCurrent
   );
@@ -36,7 +36,7 @@ export async function toolsMetadata(resource?: Uri) {
     return;
   }
   // invoke
-  await invokeZovaCli(
+  await invokeVonaCli(
     [':tools:metadata', commandPathInfo.moduleName],
     commandPathInfo.projectCurrent
   );

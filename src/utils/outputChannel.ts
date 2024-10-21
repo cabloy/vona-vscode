@@ -5,7 +5,7 @@ class Logger {
   private _outputChannel: OutputChannel;
 
   private constructor() {
-    this._outputChannel = window.createOutputChannel('Zova', { log: true });
+    this._outputChannel = window.createOutputChannel('Vona', { log: true });
   }
 
   public static getInstance(): Logger {

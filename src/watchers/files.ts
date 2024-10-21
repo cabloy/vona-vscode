@@ -4,7 +4,7 @@ import {
   RelativePattern,
   workspace,
 } from 'vscode';
-import { getWorkspaceRootDirectory } from '../utils/zova.js';
+import { getWorkspaceRootDirectory } from '../utils/vona.js';
 
 export class FileWatchers {
   context: ExtensionContext;

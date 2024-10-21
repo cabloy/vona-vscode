@@ -4,10 +4,10 @@ import {
   extractCommandPathInfo,
   preparePathResource,
   trimPathPrefixs,
-} from '../../utils/zova.js';
+} from '../../utils/vona.js';
 import { LocalConsole } from '../../utils/console.js';
 import path from 'node:path';
-import { invokeZovaCli } from '../../utils/commands.js';
+import { invokeVonaCli } from '../../utils/commands.js';
 import { showTextDocument } from '../../utils/global.js';
 
 export async function createSuite(resource?: Uri) {
@@ -33,7 +33,7 @@ export async function createSuite(resource?: Uri) {
     ['src/']
   );
   // invoke
-  await invokeZovaCli(
+  await invokeVonaCli(
     [':create:suite', pathResource, '--description=', '--author='],
     commandPathInfo.projectCurrent
   );

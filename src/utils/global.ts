@@ -3,7 +3,7 @@ import * as vscode from 'vscode';
 
 export function newTerminal(command: string, projectCurrent: string) {
   const basename = path.basename(projectCurrent);
-  const terminalName = `zova-cli:${basename}`;
+  const terminalName = `vona-cli:${basename}`;
   const existingTerminal = vscode.window.terminals.find(
     (terminal) => terminal.name === terminalName
   );

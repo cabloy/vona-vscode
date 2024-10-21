@@ -27,11 +27,11 @@ export function getWorkspaceRootDirectory(): string {
   return vscode.workspace.workspaceFolders?.[0].uri.fsPath!;
 }
 
-export function isZovaProject(pathRoot: string) {
+export function isVonaProject(pathRoot: string) {
   if (!pathRoot) {
     return false;
   }
-  const pathTest = path.join(pathRoot, 'src/boot/zova.ts');
+  const pathTest = path.join(pathRoot, 'src/backend/config/config');
   return fse.pathExistsSync(pathTest);
 }
 
@@ -43,12 +43,12 @@ export function setProjectInfo(projectInfo: IProjectInfo) {
   Object.assign(_projectInfo, projectInfo);
   vscode.commands.executeCommand(
     'setContext',
-    'zova.currentZovaProject',
+    'vona.currentVonaProject',
     _projectInfo.directoryCurrent
   );
 }
 
-export async function hasZovaProject(): Promise<IProjectInfo | undefined> {
+export async function hasVonaProject(): Promise<IProjectInfo | undefined> {
   // reset
   _projectInfo.directoryCurrent = undefined;
   _projectInfo.isMulti = false;
@@ -57,7 +57,7 @@ export async function hasZovaProject(): Promise<IProjectInfo | undefined> {
   if (!workspaceFolder) {
     return;
   }
-  if (isZovaProject(workspaceFolder)) {
+  if (isVonaProject(workspaceFolder)) {
     _projectInfo.directoryCurrent = workspaceFolder;
     _projectInfo.isMulti = false;
     return _projectInfo;
@@ -65,7 +65,7 @@ export async function hasZovaProject(): Promise<IProjectInfo | undefined> {
   // multi
   let projectNames = await fse.readdir(workspaceFolder);
   projectNames = projectNames.filter((item) => {
-    return isZovaProject(path.join(workspaceFolder, item));
+    return isVonaProject(path.join(workspaceFolder, item));
   });
   if (projectNames.length > 0) {
     _projectInfo.isMulti = true;
@@ -74,7 +74,7 @@ export async function hasZovaProject(): Promise<IProjectInfo | undefined> {
   }
 }
 
-export function getZovaProjectCurrent(resource: string) {
+export function getVonaProjectCurrent(resource: string) {
   const projectInfo = getProjectInfo();
   if (!projectInfo.isMulti) {
     return projectInfo.directoryCurrent;
@@ -102,7 +102,7 @@ export function preparePathResource(resource?: vscode.Uri) {
 
 export function extractCommandPathInfo(resource: string) {
   let commandPathInfo = {} as ICommandPathInfo;
-  commandPathInfo.projectCurrent = getZovaProjectCurrent(resource);
+  commandPathInfo.projectCurrent = getVonaProjectCurrent(resource);
   commandPathInfo.pathResource = resource
     .substring(commandPathInfo.projectCurrent.length + 1)
     .replaceAll('\\', '/');

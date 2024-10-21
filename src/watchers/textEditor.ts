@@ -2,10 +2,10 @@ import { ExtensionContext, window, Disposable } from 'vscode';
 import {
   getProjectInfo,
   getWorkspaceRootDirectory,
-  getZovaProjectCurrent,
-  isZovaProject,
+  getVonaProjectCurrent,
+  isVonaProject,
   setProjectInfo,
-} from '../utils/zova.js';
+} from '../utils/vona.js';
 import path from 'node:path';
 
 export class TextEditorWatchers {
@@ -38,8 +38,8 @@ export class TextEditorWatchers {
       return;
     }
     // multi
-    const projectFolder = getZovaProjectCurrent(file);
-    if (isZovaProject(projectFolder)) {
+    const projectFolder = getVonaProjectCurrent(file);
+    if (isVonaProject(projectFolder)) {
       setProjectInfo({ directoryCurrent: projectFolder });
     } else {
       setProjectInfo({ directoryCurrent: undefined });

@@ -1,9 +1,9 @@
 import * as vscode from 'vscode';
 import {
   getWorkspaceRootDirectory,
-  hasZovaProject,
+  hasVonaProject,
   IProjectInfo,
-} from './zova.js';
+} from './vona.js';
 import path from 'node:path';
 
 export class ContextKeys {
@@ -16,18 +16,18 @@ export class ContextKeys {
   }
 
   async _setProjectInfo() {
-    const projectInfo = await hasZovaProject();
-    // zova.hasZovaProject
+    const projectInfo = await hasVonaProject();
+    // vona.hasVonaProject
     vscode.commands.executeCommand(
       'setContext',
-      'zova.hasZovaProject',
+      'vona.hasVonaProject',
       !!projectInfo
     );
-    // zova.currentZovaProject
+    // vona.currentVonaProject
     if (projectInfo && !projectInfo.isMulti) {
       vscode.commands.executeCommand(
         'setContext',
-        'zova.currentZovaProject',
+        'vona.currentVonaProject',
         projectInfo.directoryCurrent
       );
     }
@@ -46,16 +46,16 @@ export class ContextKeys {
     const arrayProjectRoot = projectInfo.isMulti
       ? projectInfo.projectNames.map((item) => path.join(workspaceFolder, item))
       : [workspaceFolder];
-    // zova.arrayProjectRoot
+    // vona.arrayProjectRoot
     vscode.commands.executeCommand(
       'setContext',
-      'zova.arrayProjectRoot',
+      'vona.arrayProjectRoot',
       arrayProjectRoot
     );
-    // zova.arrayProjectSrc
+    // vona.arrayProjectSrc
     vscode.commands.executeCommand(
       'setContext',
-      'zova.arrayProjectSrc',
+      'vona.arrayProjectSrc',
       arrayProjectRoot.map((item) => path.join(item, 'src'))
     );
   }

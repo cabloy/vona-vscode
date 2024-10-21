@@ -2,8 +2,8 @@ import { Uri, window } from 'vscode';
 import {
   extractCommandPathInfo,
   preparePathResource,
-} from '../../utils/zova.js';
-import { invokeZovaCli } from '../../utils/commands.js';
+} from '../../utils/vona.js';
+import { invokeVonaCli } from '../../utils/commands.js';
 import path from 'node:path';
 import { showTextDocument } from '../../utils/global.js';
 
@@ -18,7 +18,7 @@ export async function initLocale(resource?: Uri) {
     return;
   }
   // invoke
-  await invokeZovaCli(
+  await invokeVonaCli(
     [':init:locale', commandPathInfo.moduleName],
     commandPathInfo.projectCurrent
   );

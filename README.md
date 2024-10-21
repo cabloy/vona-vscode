@@ -1,10 +1,10 @@
-# Zova - Official
+# Vona - Official
 
-An extension offering commands and tools to make your experience with Zova more pleasant!
+An extension offering commands and tools to make your experience with Vona more pleasant!
 
 ## Features
 
-### Zova Create
+### Vona Create
 
 - Suite
 - Module
@@ -21,7 +21,7 @@ An extension offering commands and tools to make your experience with Zova more 
 - Bean: Tool
 - Bean: General
 
-### Zova Init
+### Vona Init
 
 - Icon
 - Config
@@ -31,7 +31,7 @@ An extension offering commands and tools to make your experience with Zova more 
 - Legacy
 - Monkey
 
-### Zova Refactor
+### Vona Refactor
 
 - Add Page Query
 - Add Page Params
@@ -47,7 +47,7 @@ An extension offering commands and tools to make your experience with Zova more 
 - Create Another Render Bean
 - Create Another Style Bean
 
-### Zova Tools
+### Vona Tools
 
 - Generate .metadata
 

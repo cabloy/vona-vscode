@@ -1,12 +1,12 @@
 import semver from 'semver';
 import { getRegistry } from './registry.js';
 import { newTerminal } from './global.js';
-import { getWorkspaceRootDirectory } from './zova.js';
-import { invokeZovaCli } from './commands.js';
+import { getWorkspaceRootDirectory } from './vona.js';
+import { invokeVonaCli } from './commands.js';
 
 export async function checkIfUpdateCli() {
   try {
-    const res = await invokeZovaCli(
+    const res = await invokeVonaCli(
       ['--version'],
       getWorkspaceRootDirectory(),
       true
@@ -17,18 +17,18 @@ export async function checkIfUpdateCli() {
       needUpdate = true;
     } else {
       // version new
-      const info: any = await getPackageInfo('zova-cli');
+      const info: any = await getPackageInfo('vona-cli');
       const versionNew = info.version;
       // check
       const lt = semver.lt(versionOld, versionNew);
       needUpdate = lt;
     }
     if (needUpdate) {
-      newTerminal(`pnpm add -g zova-cli@latest`, getWorkspaceRootDirectory());
+      newTerminal(`pnpm add -g vona-cli@latest`, getWorkspaceRootDirectory());
     }
   } catch (err) {
     if (err.code === 'ENOENT') {
-      newTerminal(`pnpm add -g zova-cli@latest`, getWorkspaceRootDirectory());
+      newTerminal(`pnpm add -g vona-cli@latest`, getWorkspaceRootDirectory());
     } else {
       console.log(err);
     }

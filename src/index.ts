@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { hasZovaProject, isZovaProject } from './utils/zova.js';
+import { hasVonaProject, isVonaProject } from './utils/vona.js';
 import { activateExtension, deactivateExtension } from './extension.js';
 import { ContextKeys } from './utils/contextKeys.js';
 
