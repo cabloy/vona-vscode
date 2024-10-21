@@ -39,66 +39,6 @@
         "category": "Vona Create"
       },
       {
-        "command": "vona.createLocalBean",
-        "title": "Bean: Local",
-        "category": "Vona Create"
-      },
-      {
-        "command": "vona.createModelBean",
-        "title": "Bean: Model",
-        "category": "Vona Create"
-      },
-      {
-        "command": "vona.createStoreBean",
-        "title": "Bean: Store",
-        "category": "Vona Create"
-      },
-      {
-        "command": "vona.createStyleBean",
-        "title": "Bean: Style",
-        "category": "Vona Create"
-      },
-      {
-        "command": "vona.createThemeBean",
-        "title": "Bean: Theme",
-        "category": "Vona Create"
-      },
-      {
-        "command": "vona.createToolBean",
-        "title": "Bean: Tool",
-        "category": "Vona Create"
-      },
-      {
-        "command": "vona.createGeneralBean",
-        "title": "Bean: General",
-        "category": "Vona Create"
-      },
-      {
-        "command": "vona.createComponent",
-        "title": "Component",
-        "category": "Vona Create"
-      },
-      {
-        "command": "vona.createPage",
-        "title": "Page",
-        "category": "Vona Create"
-      },
-      {
-        "command": "vona.createService",
-        "title": "Service",
-        "category": "Vona Create"
-      },
-      {
-        "command": "vona.createMock",
-        "title": "Mock",
-        "category": "Vona Create"
-      },
-      {
-        "command": "vona.initIcon",
-        "title": "Icon",
-        "category": "Vona Init"
-      },
-      {
         "command": "vona.initConfig",
         "title": "Config",
         "category": "Vona Init"
@@ -119,69 +59,9 @@
         "category": "Vona Init"
       },
       {
-        "command": "vona.initLegacy",
-        "title": "Legacy",
-        "category": "Vona Init"
-      },
-      {
         "command": "vona.initMonkey",
         "title": "Monkey",
         "category": "Vona Init"
-      },
-      {
-        "command": "vona.refactorPageQuery",
-        "title": "Add Page Query",
-        "category": "Vona Refactor"
-      },
-      {
-        "command": "vona.refactorPageParams",
-        "title": "Add Page Params",
-        "category": "Vona Refactor"
-      },
-      {
-        "command": "vona.refactorComponentGeneric",
-        "title": "Convert to Generic Component",
-        "category": "Vona Refactor"
-      },
-      {
-        "command": "vona.refactorAnotherRender",
-        "title": "Create Another Render Bean",
-        "category": "Vona Refactor"
-      },
-      {
-        "command": "vona.refactorAnotherStyle",
-        "title": "Create Another Style Bean",
-        "category": "Vona Refactor"
-      },
-      {
-        "command": "vona.refactorRenamePage",
-        "title": "Rename Page",
-        "category": "Vona Refactor"
-      },
-      {
-        "command": "vona.refactorComponentProps",
-        "title": "Add Component Props",
-        "category": "Vona Refactor"
-      },
-      {
-        "command": "vona.refactorComponentEmits",
-        "title": "Add Component Emits",
-        "category": "Vona Refactor"
-      },
-      {
-        "command": "vona.refactorComponentSlots",
-        "title": "Add Component Slots",
-        "category": "Vona Refactor"
-      },
-      {
-        "command": "vona.refactorComponentModel",
-        "title": "Add v-model",
-        "category": "Vona Refactor"
-      },
-      {
-        "command": "vona.refactorRenameComponent",
-        "title": "Rename Component",
-        "category": "Vona Refactor"
       },
       {
         "command": "vona.toolsMetadata",
@@ -197,54 +77,6 @@
         },
         {
           "command": "vona.createModule",
-          "when": "vona.hasVonaProject && vona.currentVonaProject"
-        },
-        {
-          "command": "vona.createLocalBean",
-          "when": "vona.hasVonaProject && vona.currentVonaProject"
-        },
-        {
-          "command": "vona.createModelBean",
-          "when": "vona.hasVonaProject && vona.currentVonaProject"
-        },
-        {
-          "command": "vona.createStoreBean",
-          "when": "vona.hasVonaProject && vona.currentVonaProject"
-        },
-        {
-          "command": "vona.createStyleBean",
-          "when": "vona.hasVonaProject && vona.currentVonaProject"
-        },
-        {
-          "command": "vona.createThemeBean",
-          "when": "vona.hasVonaProject && vona.currentVonaProject"
-        },
-        {
-          "command": "vona.createToolBean",
-          "when": "vona.hasVonaProject && vona.currentVonaProject"
-        },
-        {
-          "command": "vona.createGeneralBean",
-          "when": "vona.hasVonaProject && vona.currentVonaProject"
-        },
-        {
-          "command": "vona.createComponent",
-          "when": "vona.hasVonaProject && vona.currentVonaProject"
-        },
-        {
-          "command": "vona.createPage",
-          "when": "vona.hasVonaProject && vona.currentVonaProject"
-        },
-        {
-          "command": "vona.createService",
-          "when": "vona.hasVonaProject && vona.currentVonaProject"
-        },
-        {
-          "command": "vona.createMock",
-          "when": "vona.hasVonaProject && vona.currentVonaProject"
-        },
-        {
-          "command": "vona.initIcon",
           "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
@@ -264,56 +96,8 @@
           "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "vona.initLegacy",
-          "when": "vona.hasVonaProject && vona.currentVonaProject"
-        },
-        {
           "command": "vona.initMonkey",
           "when": "vona.hasVonaProject && vona.currentVonaProject"
-        },
-        {
-          "command": "vona.refactorPageQuery",
-          "when": "vona.hasVonaProject && vona.currentVonaProject && resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
-        },
-        {
-          "command": "vona.refactorPageParams",
-          "when": "vona.hasVonaProject && vona.currentVonaProject && resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
-        },
-        {
-          "command": "vona.refactorComponentGeneric",
-          "when": "vona.hasVonaProject && vona.currentVonaProject && resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
-        },
-        {
-          "command": "vona.refactorAnotherRender",
-          "when": "vona.hasVonaProject && vona.currentVonaProject && (resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)render\\.tsx$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)render\\.tsx$/)"
-        },
-        {
-          "command": "vona.refactorAnotherStyle",
-          "when": "vona.hasVonaProject && vona.currentVonaProject && (resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)style\\.ts$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)style\\.ts$/)"
-        },
-        {
-          "command": "vona.refactorRenamePage",
-          "when": "vona.hasVonaProject && vona.currentVonaProject && resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
-        },
-        {
-          "command": "vona.refactorComponentProps",
-          "when": "vona.hasVonaProject && vona.currentVonaProject && resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
-        },
-        {
-          "command": "vona.refactorComponentEmits",
-          "when": "vona.hasVonaProject && vona.currentVonaProject && resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
-        },
-        {
-          "command": "vona.refactorComponentSlots",
-          "when": "vona.hasVonaProject && vona.currentVonaProject && resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
-        },
-        {
-          "command": "vona.refactorComponentModel",
-          "when": "vona.hasVonaProject && vona.currentVonaProject && resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
-        },
-        {
-          "command": "vona.refactorRenameComponent",
-          "when": "vona.hasVonaProject && vona.currentVonaProject && resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
         },
         {
           "command": "vona.toolsMetadata",
@@ -350,57 +134,9 @@
         {
           "command": "vona.createModule",
           "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)module$/ || resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)module-vendor$/ || resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)modules$/ || resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)modules$/)"
-        },
-        {
-          "command": "vona.createLocalBean",
-          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+$/)"
-        },
-        {
-          "command": "vona.createModelBean",
-          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
-        },
-        {
-          "command": "vona.createStoreBean",
-          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
-        },
-        {
-          "command": "vona.createStyleBean",
-          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
-        },
-        {
-          "command": "vona.createThemeBean",
-          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
-        },
-        {
-          "command": "vona.createToolBean",
-          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
-        },
-        {
-          "command": "vona.createGeneralBean",
-          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
-        },
-        {
-          "command": "vona.createComponent",
-          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)component$/)"
-        },
-        {
-          "command": "vona.createPage",
-          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)page$/)"
-        },
-        {
-          "command": "vona.createService",
-          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)service$/)"
-        },
-        {
-          "command": "vona.createMock",
-          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /(\\/|\\\\)mock$/)"
         }
       ],
       "vona.init": [
-        {
-          "command": "vona.initIcon",
-          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/)"
-        },
         {
           "command": "vona.initConfig",
           "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/)"
@@ -418,60 +154,11 @@
           "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/)"
         },
         {
-          "command": "vona.initLegacy",
-          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath in vona.arrayProjectRoot || resourcePath in vona.arrayProjectSrc)"
-        },
-        {
           "command": "vona.initMonkey",
           "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/)"
         }
       ],
-      "vona.refactor": [
-        {
-          "command": "vona.refactorPageQuery",
-          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
-        },
-        {
-          "command": "vona.refactorPageParams",
-          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
-        },
-        {
-          "command": "vona.refactorComponentGeneric",
-          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
-        },
-        {
-          "command": "vona.refactorAnotherRender",
-          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)render\\.tsx$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)render\\.tsx$/)"
-        },
-        {
-          "command": "vona.refactorAnotherStyle",
-          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)style\\.ts$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)style\\.ts$/)"
-        },
-        {
-          "command": "vona.refactorRenamePage",
-          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
-        },
-        {
-          "command": "vona.refactorComponentProps",
-          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
-        },
-        {
-          "command": "vona.refactorComponentEmits",
-          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
-        },
-        {
-          "command": "vona.refactorComponentSlots",
-          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
-        },
-        {
-          "command": "vona.refactorComponentModel",
-          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
-        },
-        {
-          "command": "vona.refactorRenameComponent",
-          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
-        }
-      ],
+      "vona.refactor": [],
       "vona.tools": [
         {
           "command": "vona.toolsMetadata",
