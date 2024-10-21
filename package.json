@@ -1,7 +1,7 @@
 {
   "name": "vona-vscode",
   "displayName": "Vona - Official",
-  "description": "An extension for Zova offering commands and tools to make your experience more pleasant.",
+  "description": "An extension for Vona offering commands and tools to make your experience more pleasant.",
   "version": "0.0.12",
   "engines": {
     "vscode": "^1.92.0"
@@ -11,490 +11,490 @@
     "Snippets"
   ],
   "repository": "https://github.com/cabloy/vona-vscode",
-  "homepage": "https://zova.js.org",
+  "homepage": "https://vona.js.org",
   "activationEvents": [
     "onStartupFinished"
   ],
   "main": "./dist/index.js",
-  "icon": "assets/zova.png",
+  "icon": "assets/vona.png",
   "publisher": "cabloy",
   "license": "MIT",
   "keywords": [
-    "Zova",
+    "Vona",
     "Vue",
-    "Zova Framework",
+    "Vona Framework",
     "VSCode",
     "ioc"
   ],
   "contributes": {
     "commands": [
       {
-        "command": "zova.createSuite",
+        "command": "vona.createSuite",
         "title": "Suite",
-        "category": "Zova Create"
+        "category": "Vona Create"
       },
       {
-        "command": "zova.createModule",
+        "command": "vona.createModule",
         "title": "Module",
-        "category": "Zova Create"
+        "category": "Vona Create"
       },
       {
-        "command": "zova.createLocalBean",
+        "command": "vona.createLocalBean",
         "title": "Bean: Local",
-        "category": "Zova Create"
+        "category": "Vona Create"
       },
       {
-        "command": "zova.createModelBean",
+        "command": "vona.createModelBean",
         "title": "Bean: Model",
-        "category": "Zova Create"
+        "category": "Vona Create"
       },
       {
-        "command": "zova.createStoreBean",
+        "command": "vona.createStoreBean",
         "title": "Bean: Store",
-        "category": "Zova Create"
+        "category": "Vona Create"
       },
       {
-        "command": "zova.createStyleBean",
+        "command": "vona.createStyleBean",
         "title": "Bean: Style",
-        "category": "Zova Create"
+        "category": "Vona Create"
       },
       {
-        "command": "zova.createThemeBean",
+        "command": "vona.createThemeBean",
         "title": "Bean: Theme",
-        "category": "Zova Create"
+        "category": "Vona Create"
       },
       {
-        "command": "zova.createToolBean",
+        "command": "vona.createToolBean",
         "title": "Bean: Tool",
-        "category": "Zova Create"
+        "category": "Vona Create"
       },
       {
-        "command": "zova.createGeneralBean",
+        "command": "vona.createGeneralBean",
         "title": "Bean: General",
-        "category": "Zova Create"
+        "category": "Vona Create"
       },
       {
-        "command": "zova.createComponent",
+        "command": "vona.createComponent",
         "title": "Component",
-        "category": "Zova Create"
+        "category": "Vona Create"
       },
       {
-        "command": "zova.createPage",
+        "command": "vona.createPage",
         "title": "Page",
-        "category": "Zova Create"
+        "category": "Vona Create"
       },
       {
-        "command": "zova.createService",
+        "command": "vona.createService",
         "title": "Service",
-        "category": "Zova Create"
+        "category": "Vona Create"
       },
       {
-        "command": "zova.createMock",
+        "command": "vona.createMock",
         "title": "Mock",
-        "category": "Zova Create"
+        "category": "Vona Create"
       },
       {
-        "command": "zova.initIcon",
+        "command": "vona.initIcon",
         "title": "Icon",
-        "category": "Zova Init"
+        "category": "Vona Init"
       },
       {
-        "command": "zova.initConfig",
+        "command": "vona.initConfig",
         "title": "Config",
-        "category": "Zova Init"
+        "category": "Vona Init"
       },
       {
-        "command": "zova.initConstant",
+        "command": "vona.initConstant",
         "title": "Constant",
-        "category": "Zova Init"
+        "category": "Vona Init"
       },
       {
-        "command": "zova.initLocale",
+        "command": "vona.initLocale",
         "title": "Locale",
-        "category": "Zova Init"
+        "category": "Vona Init"
       },
       {
-        "command": "zova.initError",
+        "command": "vona.initError",
         "title": "Error",
-        "category": "Zova Init"
+        "category": "Vona Init"
       },
       {
-        "command": "zova.initLegacy",
+        "command": "vona.initLegacy",
         "title": "Legacy",
-        "category": "Zova Init"
+        "category": "Vona Init"
       },
       {
-        "command": "zova.initMonkey",
+        "command": "vona.initMonkey",
         "title": "Monkey",
-        "category": "Zova Init"
+        "category": "Vona Init"
       },
       {
-        "command": "zova.refactorPageQuery",
+        "command": "vona.refactorPageQuery",
         "title": "Add Page Query",
-        "category": "Zova Refactor"
+        "category": "Vona Refactor"
       },
       {
-        "command": "zova.refactorPageParams",
+        "command": "vona.refactorPageParams",
         "title": "Add Page Params",
-        "category": "Zova Refactor"
+        "category": "Vona Refactor"
       },
       {
-        "command": "zova.refactorComponentGeneric",
+        "command": "vona.refactorComponentGeneric",
         "title": "Convert to Generic Component",
-        "category": "Zova Refactor"
+        "category": "Vona Refactor"
       },
       {
-        "command": "zova.refactorAnotherRender",
+        "command": "vona.refactorAnotherRender",
         "title": "Create Another Render Bean",
-        "category": "Zova Refactor"
+        "category": "Vona Refactor"
       },
       {
-        "command": "zova.refactorAnotherStyle",
+        "command": "vona.refactorAnotherStyle",
         "title": "Create Another Style Bean",
-        "category": "Zova Refactor"
+        "category": "Vona Refactor"
       },
       {
-        "command": "zova.refactorRenamePage",
+        "command": "vona.refactorRenamePage",
         "title": "Rename Page",
-        "category": "Zova Refactor"
+        "category": "Vona Refactor"
       },
       {
-        "command": "zova.refactorComponentProps",
+        "command": "vona.refactorComponentProps",
         "title": "Add Component Props",
-        "category": "Zova Refactor"
+        "category": "Vona Refactor"
       },
       {
-        "command": "zova.refactorComponentEmits",
+        "command": "vona.refactorComponentEmits",
         "title": "Add Component Emits",
-        "category": "Zova Refactor"
+        "category": "Vona Refactor"
       },
       {
-        "command": "zova.refactorComponentSlots",
+        "command": "vona.refactorComponentSlots",
         "title": "Add Component Slots",
-        "category": "Zova Refactor"
+        "category": "Vona Refactor"
       },
       {
-        "command": "zova.refactorComponentModel",
+        "command": "vona.refactorComponentModel",
         "title": "Add v-model",
-        "category": "Zova Refactor"
+        "category": "Vona Refactor"
       },
       {
-        "command": "zova.refactorRenameComponent",
+        "command": "vona.refactorRenameComponent",
         "title": "Rename Component",
-        "category": "Zova Refactor"
+        "category": "Vona Refactor"
       },
       {
-        "command": "zova.toolsMetadata",
+        "command": "vona.toolsMetadata",
         "title": "Generate .metadata",
-        "category": "Zova Tools"
+        "category": "Vona Tools"
       }
     ],
     "menus": {
       "commandPalette": [
         {
-          "command": "zova.createSuite",
-          "when": "zova.hasZovaProject && zova.currentZovaProject"
+          "command": "vona.createSuite",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "zova.createModule",
-          "when": "zova.hasZovaProject && zova.currentZovaProject"
+          "command": "vona.createModule",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "zova.createLocalBean",
-          "when": "zova.hasZovaProject && zova.currentZovaProject"
+          "command": "vona.createLocalBean",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "zova.createModelBean",
-          "when": "zova.hasZovaProject && zova.currentZovaProject"
+          "command": "vona.createModelBean",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "zova.createStoreBean",
-          "when": "zova.hasZovaProject && zova.currentZovaProject"
+          "command": "vona.createStoreBean",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "zova.createStyleBean",
-          "when": "zova.hasZovaProject && zova.currentZovaProject"
+          "command": "vona.createStyleBean",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "zova.createThemeBean",
-          "when": "zova.hasZovaProject && zova.currentZovaProject"
+          "command": "vona.createThemeBean",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "zova.createToolBean",
-          "when": "zova.hasZovaProject && zova.currentZovaProject"
+          "command": "vona.createToolBean",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "zova.createGeneralBean",
-          "when": "zova.hasZovaProject && zova.currentZovaProject"
+          "command": "vona.createGeneralBean",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "zova.createComponent",
-          "when": "zova.hasZovaProject && zova.currentZovaProject"
+          "command": "vona.createComponent",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "zova.createPage",
-          "when": "zova.hasZovaProject && zova.currentZovaProject"
+          "command": "vona.createPage",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "zova.createService",
-          "when": "zova.hasZovaProject && zova.currentZovaProject"
+          "command": "vona.createService",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "zova.createMock",
-          "when": "zova.hasZovaProject && zova.currentZovaProject"
+          "command": "vona.createMock",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "zova.initIcon",
-          "when": "zova.hasZovaProject && zova.currentZovaProject"
+          "command": "vona.initIcon",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "zova.initConfig",
-          "when": "zova.hasZovaProject && zova.currentZovaProject"
+          "command": "vona.initConfig",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "zova.initConstant",
-          "when": "zova.hasZovaProject && zova.currentZovaProject"
+          "command": "vona.initConstant",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "zova.initLocale",
-          "when": "zova.hasZovaProject && zova.currentZovaProject"
+          "command": "vona.initLocale",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "zova.initError",
-          "when": "zova.hasZovaProject && zova.currentZovaProject"
+          "command": "vona.initError",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "zova.initLegacy",
-          "when": "zova.hasZovaProject && zova.currentZovaProject"
+          "command": "vona.initLegacy",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "zova.initMonkey",
-          "when": "zova.hasZovaProject && zova.currentZovaProject"
+          "command": "vona.initMonkey",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "zova.refactorPageQuery",
-          "when": "zova.hasZovaProject && zova.currentZovaProject && resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
+          "command": "vona.refactorPageQuery",
+          "when": "vona.hasVonaProject && vona.currentVonaProject && resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
         },
         {
-          "command": "zova.refactorPageParams",
-          "when": "zova.hasZovaProject && zova.currentZovaProject && resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
+          "command": "vona.refactorPageParams",
+          "when": "vona.hasVonaProject && vona.currentVonaProject && resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
         },
         {
-          "command": "zova.refactorComponentGeneric",
-          "when": "zova.hasZovaProject && zova.currentZovaProject && resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
+          "command": "vona.refactorComponentGeneric",
+          "when": "vona.hasVonaProject && vona.currentVonaProject && resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
         },
         {
-          "command": "zova.refactorAnotherRender",
-          "when": "zova.hasZovaProject && zova.currentZovaProject && (resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)render\\.tsx$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)render\\.tsx$/)"
+          "command": "vona.refactorAnotherRender",
+          "when": "vona.hasVonaProject && vona.currentVonaProject && (resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)render\\.tsx$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)render\\.tsx$/)"
         },
         {
-          "command": "zova.refactorAnotherStyle",
-          "when": "zova.hasZovaProject && zova.currentZovaProject && (resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)style\\.ts$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)style\\.ts$/)"
+          "command": "vona.refactorAnotherStyle",
+          "when": "vona.hasVonaProject && vona.currentVonaProject && (resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)style\\.ts$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)style\\.ts$/)"
         },
         {
-          "command": "zova.refactorRenamePage",
-          "when": "zova.hasZovaProject && zova.currentZovaProject && resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
+          "command": "vona.refactorRenamePage",
+          "when": "vona.hasVonaProject && vona.currentVonaProject && resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
         },
         {
-          "command": "zova.refactorComponentProps",
-          "when": "zova.hasZovaProject && zova.currentZovaProject && resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
+          "command": "vona.refactorComponentProps",
+          "when": "vona.hasVonaProject && vona.currentVonaProject && resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
         },
         {
-          "command": "zova.refactorComponentEmits",
-          "when": "zova.hasZovaProject && zova.currentZovaProject && resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
+          "command": "vona.refactorComponentEmits",
+          "when": "vona.hasVonaProject && vona.currentVonaProject && resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
         },
         {
-          "command": "zova.refactorComponentSlots",
-          "when": "zova.hasZovaProject && zova.currentZovaProject && resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
+          "command": "vona.refactorComponentSlots",
+          "when": "vona.hasVonaProject && vona.currentVonaProject && resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
         },
         {
-          "command": "zova.refactorComponentModel",
-          "when": "zova.hasZovaProject && zova.currentZovaProject && resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
+          "command": "vona.refactorComponentModel",
+          "when": "vona.hasVonaProject && vona.currentVonaProject && resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
         },
         {
-          "command": "zova.refactorRenameComponent",
-          "when": "zova.hasZovaProject && zova.currentZovaProject && resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
+          "command": "vona.refactorRenameComponent",
+          "when": "vona.hasVonaProject && vona.currentVonaProject && resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/"
         },
         {
-          "command": "zova.toolsMetadata",
-          "when": "zova.hasZovaProject && zova.currentZovaProject"
+          "command": "vona.toolsMetadata",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
         }
       ],
       "explorer/context": [
         {
-          "submenu": "zova.create",
+          "submenu": "vona.create",
           "group": "navigation",
-          "when": "zova.hasZovaProject"
+          "when": "vona.hasVonaProject"
         },
         {
-          "submenu": "zova.init",
+          "submenu": "vona.init",
           "group": "navigation",
-          "when": "zova.hasZovaProject"
+          "when": "vona.hasVonaProject"
         },
         {
-          "submenu": "zova.refactor",
+          "submenu": "vona.refactor",
           "group": "navigation",
-          "when": "zova.hasZovaProject"
+          "when": "vona.hasVonaProject"
         },
         {
-          "submenu": "zova.tools",
+          "submenu": "vona.tools",
           "group": "navigation",
-          "when": "zova.hasZovaProject"
+          "when": "vona.hasVonaProject"
         }
       ],
-      "zova.create": [
+      "vona.create": [
         {
-          "command": "zova.createSuite",
-          "when": "zova.hasZovaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite$/ || resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite-vendor$/)"
+          "command": "vona.createSuite",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite$/ || resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite-vendor$/)"
         },
         {
-          "command": "zova.createModule",
-          "when": "zova.hasZovaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)module$/ || resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)module-vendor$/ || resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)modules$/ || resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)modules$/)"
+          "command": "vona.createModule",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)module$/ || resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)module-vendor$/ || resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)modules$/ || resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)modules$/)"
         },
         {
-          "command": "zova.createLocalBean",
-          "when": "zova.hasZovaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+$/)"
+          "command": "vona.createLocalBean",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+$/)"
         },
         {
-          "command": "zova.createModelBean",
-          "when": "zova.hasZovaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
+          "command": "vona.createModelBean",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
         },
         {
-          "command": "zova.createStoreBean",
-          "when": "zova.hasZovaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
+          "command": "vona.createStoreBean",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
         },
         {
-          "command": "zova.createStyleBean",
-          "when": "zova.hasZovaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
+          "command": "vona.createStyleBean",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
         },
         {
-          "command": "zova.createThemeBean",
-          "when": "zova.hasZovaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
+          "command": "vona.createThemeBean",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
         },
         {
-          "command": "zova.createToolBean",
-          "when": "zova.hasZovaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
+          "command": "vona.createToolBean",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
         },
         {
-          "command": "zova.createGeneralBean",
-          "when": "zova.hasZovaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
+          "command": "vona.createGeneralBean",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
         },
         {
-          "command": "zova.createComponent",
-          "when": "zova.hasZovaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)component$/)"
+          "command": "vona.createComponent",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)component$/)"
         },
         {
-          "command": "zova.createPage",
-          "when": "zova.hasZovaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)page$/)"
+          "command": "vona.createPage",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)page$/)"
         },
         {
-          "command": "zova.createService",
-          "when": "zova.hasZovaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)service$/)"
+          "command": "vona.createService",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)service$/)"
         },
         {
-          "command": "zova.createMock",
-          "when": "zova.hasZovaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /(\\/|\\\\)mock$/)"
+          "command": "vona.createMock",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /(\\/|\\\\)mock$/)"
         }
       ],
-      "zova.init": [
+      "vona.init": [
         {
-          "command": "zova.initIcon",
-          "when": "zova.hasZovaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/)"
+          "command": "vona.initIcon",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/)"
         },
         {
-          "command": "zova.initConfig",
-          "when": "zova.hasZovaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/)"
+          "command": "vona.initConfig",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/)"
         },
         {
-          "command": "zova.initConstant",
-          "when": "zova.hasZovaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/)"
+          "command": "vona.initConstant",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/)"
         },
         {
-          "command": "zova.initLocale",
-          "when": "zova.hasZovaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/)"
+          "command": "vona.initLocale",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/)"
         },
         {
-          "command": "zova.initError",
-          "when": "zova.hasZovaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/)"
+          "command": "vona.initError",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/)"
         },
         {
-          "command": "zova.initLegacy",
-          "when": "zova.hasZovaProject && explorerResourceIsFolder && (resourcePath in zova.arrayProjectRoot || resourcePath in zova.arrayProjectSrc)"
+          "command": "vona.initLegacy",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath in vona.arrayProjectRoot || resourcePath in vona.arrayProjectSrc)"
         },
         {
-          "command": "zova.initMonkey",
-          "when": "zova.hasZovaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/)"
+          "command": "vona.initMonkey",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/)"
         }
       ],
-      "zova.refactor": [
+      "vona.refactor": [
         {
-          "command": "zova.refactorPageQuery",
-          "when": "zova.hasZovaProject && (resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
+          "command": "vona.refactorPageQuery",
+          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
         },
         {
-          "command": "zova.refactorPageParams",
-          "when": "zova.hasZovaProject && (resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
+          "command": "vona.refactorPageParams",
+          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
         },
         {
-          "command": "zova.refactorComponentGeneric",
-          "when": "zova.hasZovaProject && (resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
+          "command": "vona.refactorComponentGeneric",
+          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
         },
         {
-          "command": "zova.refactorAnotherRender",
-          "when": "zova.hasZovaProject && (resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)render\\.tsx$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)render\\.tsx$/)"
+          "command": "vona.refactorAnotherRender",
+          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)render\\.tsx$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)render\\.tsx$/)"
         },
         {
-          "command": "zova.refactorAnotherStyle",
-          "when": "zova.hasZovaProject && (resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)style\\.ts$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)style\\.ts$/)"
+          "command": "vona.refactorAnotherStyle",
+          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)style\\.ts$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)style\\.ts$/)"
         },
         {
-          "command": "zova.refactorRenamePage",
-          "when": "zova.hasZovaProject && (resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
+          "command": "vona.refactorRenamePage",
+          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)page(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
         },
         {
-          "command": "zova.refactorComponentProps",
-          "when": "zova.hasZovaProject && (resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
+          "command": "vona.refactorComponentProps",
+          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
         },
         {
-          "command": "zova.refactorComponentEmits",
-          "when": "zova.hasZovaProject && (resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
+          "command": "vona.refactorComponentEmits",
+          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
         },
         {
-          "command": "zova.refactorComponentSlots",
-          "when": "zova.hasZovaProject && (resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
+          "command": "vona.refactorComponentSlots",
+          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
         },
         {
-          "command": "zova.refactorComponentModel",
-          "when": "zova.hasZovaProject && (resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
+          "command": "vona.refactorComponentModel",
+          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
         },
         {
-          "command": "zova.refactorRenameComponent",
-          "when": "zova.hasZovaProject && (resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
+          "command": "vona.refactorRenameComponent",
+          "when": "vona.hasVonaProject && (resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath=~ /src(\\/|\\\\)component(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)controller\\.ts$/)"
         }
       ],
-      "zova.tools": [
+      "vona.tools": [
         {
-          "command": "zova.toolsMetadata",
-          "when": "zova.hasZovaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)\\.metadata/)"
+          "command": "vona.toolsMetadata",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)\\.metadata/)"
         }
       ]
     },
     "submenus": [
       {
-        "id": "zova.create",
-        "label": "Zova Create"
+        "id": "vona.create",
+        "label": "Vona Create"
       },
       {
-        "id": "zova.init",
-        "label": "Zova Init"
+        "id": "vona.init",
+        "label": "Vona Init"
       },
       {
-        "id": "zova.refactor",
-        "label": "Zova Refactor"
+        "id": "vona.refactor",
+        "label": "Vona Refactor"
       },
       {
-        "id": "zova.tools",
-        "label": "Zova Tools"
+        "id": "vona.tools",
+        "label": "Vona Tools"
       }
     ]
   },
