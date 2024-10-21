@@ -10,7 +10,7 @@
     "Programming Languages",
     "Snippets"
   ],
-  "repository": "https://github.com/cabloy/zova-vscode",
+  "repository": "https://github.com/cabloy/vona-vscode",
   "homepage": "https://zova.js.org",
   "activationEvents": [
     "onStartupFinished"
