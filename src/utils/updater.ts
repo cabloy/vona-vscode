@@ -27,7 +27,7 @@ export async function checkIfUpdateCli() {
       newTerminal(`pnpm add -g vona-cli@latest`, getWorkspaceRootDirectory());
     }
   } catch (err) {
-    if (err.code === 'ENOENT') {
+    if (err.code === 'ENOENT' || err.code === 10127) {
       newTerminal(`pnpm add -g vona-cli@latest`, getWorkspaceRootDirectory());
     } else {
       console.log(err);
