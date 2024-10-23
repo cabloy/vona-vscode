@@ -14,6 +14,10 @@ export async function beanGlobal(resource: Uri) {
   await beanGeneral_common(resource, 'bean', 'What is the global bean name?');
 }
 
+export async function beanAop(resource: Uri) {
+  await beanGeneral_common(resource, 'aop', 'What is the aop bean name?');
+}
+
 export async function beanGeneral_common(
   resource: Uri,
   sceneName: string,
