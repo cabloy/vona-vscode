@@ -12,6 +12,7 @@ import { initConstant } from '../commands/init/constant.js';
 import { initLocale } from '../commands/init/locale.js';
 import { initError } from '../commands/init/error.js';
 import { initMonkey } from '../commands/init/monkey.js';
+import { initMain } from '../commands/init/main.js';
 import { createModule } from '../commands/create/module.js';
 import { createSuite } from '../commands/create/suite.js';
 
@@ -28,6 +29,7 @@ const extensionCommands = [
   { command: 'vona.initLocale', function: initLocale },
   { command: 'vona.initError', function: initError },
   { command: 'vona.initMonkey', function: initMonkey },
+  { command: 'vona.initMain', function: initMain },
   // refactor
   // tools
   { command: 'vona.toolsMetadata', function: toolsMetadata },
