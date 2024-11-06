@@ -15,11 +15,23 @@ import { initMonkey } from '../commands/init/monkey.js';
 import { initMain } from '../commands/init/main.js';
 import { createModule } from '../commands/create/module.js';
 import { createSuite } from '../commands/create/suite.js';
+import {
+  createDto,
+  createEntity,
+  createModel,
+  createService,
+  createController,
+} from '../commands/create/entity.js';
 
 const extensionCommands = [
   // create
   { command: 'vona.createModule', function: createModule },
   { command: 'vona.createSuite', function: createSuite },
+  { command: 'vona.createDto', function: createDto },
+  { command: 'vona.createEntity', function: createEntity },
+  { command: 'vona.createModel', function: createModel },
+  { command: 'vona.createService', function: createService },
+  { command: 'vona.createController', function: createController },
   // bean
   { command: 'vona.beanGlobal', function: beanGlobal },
   { command: 'vona.beanAop', function: beanAop },
