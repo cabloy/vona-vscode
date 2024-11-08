@@ -74,6 +74,11 @@
         "category": "Vona Bean"
       },
       {
+        "command": "vona.beanMiddleware",
+        "title": "Middleware",
+        "category": "Vona Bean"
+      },
+      {
         "command": "vona.initConfig",
         "title": "Config",
         "category": "Vona Init"
@@ -150,6 +155,10 @@
         },
         {
           "command": "vona.beanAop",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
+        },
+        {
+          "command": "vona.beanMiddleware",
           "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
@@ -249,6 +258,10 @@
         },
         {
           "command": "vona.beanAop",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
+        },
+        {
+          "command": "vona.beanMiddleware",
           "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
         }
       ],

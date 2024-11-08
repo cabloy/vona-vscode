@@ -18,6 +18,14 @@ export async function beanAop(resource: Uri) {
   await beanGeneral_common(resource, 'aop', 'What is the aop bean name?');
 }
 
+export async function beanMiddleware(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'middleware',
+    'What is the middleware bean name?'
+  );
+}
+
 export async function beanGeneral_common(
   resource: Uri,
   sceneName: string,
@@ -43,7 +51,7 @@ export async function beanGeneral_common(
     ['src/bean/', 'src/']
   );
   // invoke
-  const commandName = sceneName === 'bean' ? 'general' : sceneName;
+  // const commandName = sceneName === 'bean' ? 'general' : sceneName;
   await invokeVonaCli(
     [
       `:create:bean`,

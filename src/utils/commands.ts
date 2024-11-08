@@ -1,5 +1,9 @@
 import { commands, ExtensionContext, window } from 'vscode';
-import { beanGlobal, beanAop } from '../commands/create/bean.js';
+import {
+  beanGlobal,
+  beanAop,
+  beanMiddleware,
+} from '../commands/create/bean.js';
 import { logger } from './outputChannel.js';
 import { LocalConsole } from './console.js';
 import { ProcessHelper } from '@cabloy/process-helper';
@@ -36,6 +40,7 @@ const extensionCommands = [
   // bean
   { command: 'vona.beanGlobal', function: beanGlobal },
   { command: 'vona.beanAop', function: beanAop },
+  { command: 'vona.beanMiddleware', function: beanMiddleware },
   // init
   { command: 'vona.initConfig', function: initConfig },
   { command: 'vona.initConstant', function: initConstant },
