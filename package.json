@@ -104,6 +104,11 @@
         "category": "Vona Init"
       },
       {
+        "command": "vona.initStatic",
+        "title": "Static Resources",
+        "category": "Vona Init"
+      },
+      {
         "command": "vona.toolsMetadata",
         "title": "Generate .metadata",
         "category": "Vona Tools"
@@ -169,6 +174,10 @@
         },
         {
           "command": "vona.initMain",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
+        },
+        {
+          "command": "vona.initStatic",
           "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
@@ -267,6 +276,10 @@
         {
           "command": "vona.initMain",
           "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/)"
+        },
+        {
+          "command": "vona.initStatic",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/)"
         }
       ],
       "vona.refactor": [],
