@@ -3,6 +3,9 @@ import {
   beanGlobal,
   beanAop,
   beanMiddleware,
+  beanGuard,
+  beanInterceptor,
+  beanPipe,
 } from '../commands/create/bean.js';
 import { logger } from './outputChannel.js';
 import { LocalConsole } from './console.js';
@@ -41,6 +44,9 @@ const extensionCommands = [
   { command: 'vona.beanGlobal', function: beanGlobal },
   { command: 'vona.beanAop', function: beanAop },
   { command: 'vona.beanMiddleware', function: beanMiddleware },
+  { command: 'vona.beanGuard', function: beanGuard },
+  { command: 'vona.beanInterceptor', function: beanInterceptor },
+  { command: 'vona.beanPipe', function: beanPipe },
   // init
   { command: 'vona.initConfig', function: initConfig },
   { command: 'vona.initConstant', function: initConstant },

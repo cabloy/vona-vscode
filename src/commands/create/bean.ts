@@ -26,6 +26,22 @@ export async function beanMiddleware(resource: Uri) {
   );
 }
 
+export async function beanGuard(resource: Uri) {
+  await beanGeneral_common(resource, 'guard', 'What is the guard bean name?');
+}
+
+export async function beanInterceptor(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'interceptor',
+    'What is the interceptor bean name?'
+  );
+}
+
+export async function beanPipe(resource: Uri) {
+  await beanGeneral_common(resource, 'pipe', 'What is the pipe bean name?');
+}
+
 export async function beanGeneral_common(
   resource: Uri,
   sceneName: string,
