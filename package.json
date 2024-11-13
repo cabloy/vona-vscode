@@ -94,6 +94,16 @@
         "category": "Vona Bean"
       },
       {
+        "command": "vona.beanConnection",
+        "title": "Socket Connection",
+        "category": "Vona Bean"
+      },
+      {
+        "command": "vona.beanPacket",
+        "title": "Socket Packet",
+        "category": "Vona Bean"
+      },
+      {
         "command": "vona.initConfig",
         "title": "Config",
         "category": "Vona Init"
@@ -186,6 +196,14 @@
         },
         {
           "command": "vona.beanPipe",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
+        },
+        {
+          "command": "vona.beanConnection",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
+        },
+        {
+          "command": "vona.beanPacket",
           "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
@@ -301,6 +319,14 @@
         },
         {
           "command": "vona.beanPipe",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
+        },
+        {
+          "command": "vona.beanConnection",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
+        },
+        {
+          "command": "vona.beanPacket",
           "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean/)"
         }
       ],

@@ -42,6 +42,18 @@ export async function beanPipe(resource: Uri) {
   await beanGeneral_common(resource, 'pipe', 'What is the pipe bean name?');
 }
 
+export async function beanConnection(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'connection',
+    'What is the connection bean name?'
+  );
+}
+
+export async function beanPacket(resource: Uri) {
+  await beanGeneral_common(resource, 'packet', 'What is the packet bean name?');
+}
+
 export async function beanGeneral_common(
   resource: Uri,
   sceneName: string,
