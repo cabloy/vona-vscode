@@ -32,6 +32,7 @@ import {
   createService,
   createController,
 } from '../commands/create/entity.js';
+import { createTest } from '../commands/create/test.js';
 
 const extensionCommands = [
   // create
@@ -42,6 +43,7 @@ const extensionCommands = [
   { command: 'vona.createModel', function: createModel },
   { command: 'vona.createService', function: createService },
   { command: 'vona.createController', function: createController },
+  { command: 'vona.createTest', function: createTest },
   // bean
   { command: 'vona.beanGlobal', function: beanGlobal },
   { command: 'vona.beanAop', function: beanAop },
