@@ -15,19 +15,23 @@ export async function createDto(resource: Uri) {
 }
 
 export async function createEntity(resource: Uri) {
-  await createGeneral_common(resource, 'entity', 'What is the dto name?');
+  await createGeneral_common(resource, 'entity', 'What is the entity name?');
 }
 
 export async function createModel(resource: Uri) {
-  await createGeneral_common(resource, 'model', 'What is the dto name?');
+  await createGeneral_common(resource, 'model', 'What is the model name?');
 }
 
 export async function createService(resource: Uri) {
-  await createGeneral_common(resource, 'service', 'What is the dto name?');
+  await createGeneral_common(resource, 'service', 'What is the service name?');
 }
 
 export async function createController(resource: Uri) {
-  await createGeneral_common(resource, 'controller', 'What is the dto name?');
+  await createGeneral_common(
+    resource,
+    'controller',
+    'What is the controller name?'
+  );
 }
 
 export async function createGeneral_common(
