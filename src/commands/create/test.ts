@@ -30,7 +30,7 @@ export async function createTest(resource?: Uri) {
   // pathResource
   const pathResource = trimPathPrefixs(
     combineCliResourcePath(commandPathInfo.pathResource, name),
-    ['src/test/', 'src/']
+    ['test/', 'src/']
   );
   // invoke
   await invokeVonaCli(
@@ -40,7 +40,7 @@ export async function createTest(resource?: Uri) {
   // open
   const fileDest = path.join(
     commandPathInfo.moduleRoot,
-    `src/test/${pathResource}.test.ts`
+    `test/${pathResource}.test.ts`
   );
   showTextDocument(path.join(commandPathInfo.projectCurrent, fileDest));
 }
