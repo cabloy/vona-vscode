@@ -42,6 +42,10 @@ export async function beanPipe(resource: Uri) {
   await beanGeneral_common(resource, 'pipe', 'What is the pipe bean name?');
 }
 
+export async function beanFilter(resource: Uri) {
+  await beanGeneral_common(resource, 'pipe', 'What is the filter bean name?');
+}
+
 export async function beanConnection(resource: Uri) {
   await beanGeneral_common(
     resource,
