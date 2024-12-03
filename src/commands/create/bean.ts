@@ -58,19 +58,40 @@ export async function beanPacket(resource: Uri) {
   await beanGeneral_common(resource, 'packet', 'What is the packet bean name?');
 }
 
+export async function beanMetaIndex(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'meta',
+    'What is the meta index bean name?',
+    'index'
+  );
+}
+
+export async function beanMetaVersion(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'meta',
+    'What is the meta version bean name?',
+    'version'
+  );
+}
+
 export async function beanGeneral_common(
   resource: Uri,
   sceneName: string,
-  prompt: string
+  prompt: string,
+  name?: string
 ) {
   const { fromPalette, fsPath } = preparePathResource(resource);
   if (!fsPath) {
     return;
   }
   // name
-  const name = await window.showInputBox({ prompt });
   if (!name) {
-    return;
+    name = await window.showInputBox({ prompt });
+    if (!name) {
+      return;
+    }
   }
   // commandPathInfo
   const commandPathInfo = extractCommandPathInfo(fsPath);

@@ -9,6 +9,8 @@ import {
   beanFilter,
   beanConnection,
   beanPacket,
+  beanMetaIndex,
+  beanMetaVersion,
 } from '../commands/create/bean.js';
 import { logger } from './outputChannel.js';
 import { LocalConsole } from './console.js';
@@ -55,6 +57,8 @@ const extensionCommands = [
   { command: 'vona.beanFilter', function: beanFilter },
   { command: 'vona.beanConnection', function: beanConnection },
   { command: 'vona.beanPacket', function: beanPacket },
+  { command: 'vona.beanMetaIndex', function: beanMetaIndex },
+  { command: 'vona.beanMetaVersion', function: beanMetaVersion },
   // init
   { command: 'vona.initConfig', function: initConfig },
   { command: 'vona.initConstant', function: initConstant },
