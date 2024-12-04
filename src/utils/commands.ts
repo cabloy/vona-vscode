@@ -7,8 +7,8 @@ import {
   beanInterceptor,
   beanPipe,
   beanFilter,
-  beanConnection,
-  beanPacket,
+  beanSocketConnection,
+  beanSocketPacket,
   beanMetaIndex,
   beanMetaVersion,
 } from '../commands/create/bean.js';
@@ -55,8 +55,8 @@ const extensionCommands = [
   { command: 'vona.beanInterceptor', function: beanInterceptor },
   { command: 'vona.beanPipe', function: beanPipe },
   { command: 'vona.beanFilter', function: beanFilter },
-  { command: 'vona.beanConnection', function: beanConnection },
-  { command: 'vona.beanPacket', function: beanPacket },
+  { command: 'vona.beanSocketConnection', function: beanSocketConnection },
+  { command: 'vona.beanSocketPacket', function: beanSocketPacket },
   { command: 'vona.beanMetaIndex', function: beanMetaIndex },
   { command: 'vona.beanMetaVersion', function: beanMetaVersion },
   // init

@@ -46,16 +46,20 @@ export async function beanFilter(resource: Uri) {
   await beanGeneral_common(resource, 'filter', 'What is the filter bean name?');
 }
 
-export async function beanConnection(resource: Uri) {
+export async function beanSocketConnection(resource: Uri) {
   await beanGeneral_common(
     resource,
-    'connection',
-    'What is the connection bean name?'
+    'socketConnection',
+    'What is the socket connection bean name?'
   );
 }
 
-export async function beanPacket(resource: Uri) {
-  await beanGeneral_common(resource, 'packet', 'What is the packet bean name?');
+export async function beanSocketPacket(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'socketPacket',
+    'What is the socket packet bean name?'
+  );
 }
 
 export async function beanMetaIndex(resource: Uri) {
