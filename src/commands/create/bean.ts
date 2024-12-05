@@ -80,6 +80,14 @@ export async function beanMetaVersion(resource: Uri) {
   );
 }
 
+export async function beanSummerCache(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'summerCache',
+    'What is the summer cache bean name?'
+  );
+}
+
 export async function beanGeneral_common(
   resource: Uri,
   sceneName: string,
