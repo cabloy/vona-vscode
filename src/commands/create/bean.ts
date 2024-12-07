@@ -80,6 +80,15 @@ export async function beanMetaVersion(resource: Uri) {
   );
 }
 
+export async function beanMetaStatus(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'meta',
+    'What is the meta status bean name?',
+    'status'
+  );
+}
+
 export async function beanSummerCache(resource: Uri) {
   await beanGeneral_common(
     resource,

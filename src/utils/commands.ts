@@ -11,6 +11,7 @@ import {
   beanSocketPacket,
   beanMetaIndex,
   beanMetaVersion,
+  beanMetaStatus,
   beanSummerCache,
 } from '../commands/create/bean.js';
 import { logger } from './outputChannel.js';
@@ -60,6 +61,7 @@ const extensionCommands = [
   { command: 'vona.beanSocketPacket', function: beanSocketPacket },
   { command: 'vona.beanMetaIndex', function: beanMetaIndex },
   { command: 'vona.beanMetaVersion', function: beanMetaVersion },
+  { command: 'vona.beanMetaStatus', function: beanMetaStatus },
   { command: 'vona.beanSummerCache', function: beanSummerCache },
   // init
   { command: 'vona.initConfig', function: initConfig },
