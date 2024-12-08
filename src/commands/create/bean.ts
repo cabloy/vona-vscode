@@ -105,6 +105,14 @@ export async function beanStartup(resource: Uri) {
   );
 }
 
+export async function beanSchedule(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'schedule',
+    'What is the schedule bean name?'
+  );
+}
+
 export async function beanGeneral_common(
   resource: Uri,
   sceneName: string,

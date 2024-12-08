@@ -14,6 +14,7 @@ import {
   beanMetaStatus,
   beanSummerCache,
   beanStartup,
+  beanSchedule,
 } from '../commands/create/bean.js';
 import { logger } from './outputChannel.js';
 import { LocalConsole } from './console.js';
@@ -65,6 +66,7 @@ const extensionCommands = [
   { command: 'vona.beanMetaStatus', function: beanMetaStatus },
   { command: 'vona.beanSummerCache', function: beanSummerCache },
   { command: 'vona.beanStartup', function: beanStartup },
+  { command: 'vona.beanSchedule', function: beanSchedule },
   // init
   { command: 'vona.initConfig', function: initConfig },
   { command: 'vona.initConstant', function: initConstant },
