@@ -105,6 +105,10 @@ export async function beanStartup(resource: Uri) {
   );
 }
 
+export async function beanQueue(resource: Uri) {
+  await beanGeneral_common(resource, 'queue', 'What is the queue bean name?');
+}
+
 export async function beanSchedule(resource: Uri) {
   await beanGeneral_common(
     resource,
