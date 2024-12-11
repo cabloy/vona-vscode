@@ -89,6 +89,15 @@ export async function beanMetaStatus(resource: Uri) {
   );
 }
 
+export async function beanMetaRedlock(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'meta',
+    'What is the meta redlock bean name?',
+    'redlock'
+  );
+}
+
 export async function beanSummerCache(resource: Uri) {
   await beanGeneral_common(
     resource,
