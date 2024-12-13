@@ -19,6 +19,9 @@ import {
   beanSchedule,
   createEntity,
   createModel,
+  createDto,
+  createService,
+  createController,
 } from '../commands/create/bean.js';
 import { logger } from './outputChannel.js';
 import { LocalConsole } from './console.js';
@@ -36,11 +39,6 @@ import { initMain } from '../commands/init/main.js';
 import { initStatic } from '../commands/init/static.js';
 import { createModule } from '../commands/create/module.js';
 import { createSuite } from '../commands/create/suite.js';
-import {
-  createDto,
-  createService,
-  createController,
-} from '../commands/create/entity.js';
 import { createTest } from '../commands/create/test.js';
 
 const extensionCommands = [

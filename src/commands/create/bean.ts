@@ -134,6 +134,22 @@ export async function createModel(resource: Uri) {
   await beanGeneral_common(resource, 'model', 'What is the model name?');
 }
 
+export async function createDto(resource: Uri) {
+  await beanGeneral_common(resource, 'dto', 'What is the dto name?');
+}
+
+export async function createService(resource: Uri) {
+  await beanGeneral_common(resource, 'service', 'What is the service name?');
+}
+
+export async function createController(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'controller',
+    'What is the controller name?'
+  );
+}
+
 export async function beanGeneral_common(
   resource: Uri,
   sceneName: string,
@@ -173,7 +189,13 @@ export async function beanGeneral_common(
     commandPathInfo.projectCurrent
   );
   // open
-  const fileDestScene = ['model'].includes(sceneName)
+  const fileDestScene = [
+    'entity',
+    'model',
+    'dto',
+    'service',
+    'controller',
+  ].includes(sceneName)
     ? `src/${sceneName}/${pathResource}.ts`
     : `src/bean/${sceneName}.${pathResource}.ts`;
   const fileDest = path.join(commandPathInfo.moduleRoot, fileDestScene);
