@@ -17,6 +17,8 @@ import {
   beanStartup,
   beanQueue,
   beanSchedule,
+  createEntity,
+  createModel,
 } from '../commands/create/bean.js';
 import { logger } from './outputChannel.js';
 import { LocalConsole } from './console.js';
@@ -36,8 +38,6 @@ import { createModule } from '../commands/create/module.js';
 import { createSuite } from '../commands/create/suite.js';
 import {
   createDto,
-  createEntity,
-  createModel,
   createService,
   createController,
 } from '../commands/create/entity.js';

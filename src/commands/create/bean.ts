@@ -126,6 +126,14 @@ export async function beanSchedule(resource: Uri) {
   );
 }
 
+export async function createEntity(resource: Uri) {
+  await beanGeneral_common(resource, 'entity', 'What is the entity name?');
+}
+
+export async function createModel(resource: Uri) {
+  await beanGeneral_common(resource, 'model', 'What is the model name?');
+}
+
 export async function beanGeneral_common(
   resource: Uri,
   sceneName: string,
@@ -151,7 +159,7 @@ export async function beanGeneral_common(
   // pathResource
   const pathResource = trimPathPrefixs(
     combineCliResourcePath(commandPathInfo.pathResource, name),
-    ['src/bean/', 'src/']
+    [`src/${sceneName}/`, 'src/bean/', 'src/']
   );
   // invoke
   // const commandName = sceneName === 'bean' ? 'general' : sceneName;
@@ -165,9 +173,9 @@ export async function beanGeneral_common(
     commandPathInfo.projectCurrent
   );
   // open
-  const fileDest = path.join(
-    commandPathInfo.moduleRoot,
-    `src/bean/${sceneName}.${pathResource}.ts`
-  );
+  const fileDestScene = ['model'].includes(sceneName)
+    ? `src/${sceneName}/${pathResource}.ts`
+    : `src/bean/${sceneName}.${pathResource}.ts`;
+  const fileDest = path.join(commandPathInfo.moduleRoot, fileDestScene);
   showTextDocument(path.join(commandPathInfo.projectCurrent, fileDest));
 }

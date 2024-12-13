@@ -14,14 +14,6 @@ export async function createDto(resource: Uri) {
   await createGeneral_common(resource, 'dto', 'What is the dto name?');
 }
 
-export async function createEntity(resource: Uri) {
-  await createGeneral_common(resource, 'entity', 'What is the entity name?');
-}
-
-export async function createModel(resource: Uri) {
-  await createGeneral_common(resource, 'model', 'What is the model name?');
-}
-
 export async function createService(resource: Uri) {
   await createGeneral_common(resource, 'service', 'What is the service name?');
 }
