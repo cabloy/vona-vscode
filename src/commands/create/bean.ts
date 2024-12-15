@@ -118,6 +118,14 @@ export async function beanQueue(resource: Uri) {
   await beanGeneral_common(resource, 'queue', 'What is the queue bean name?');
 }
 
+export async function beanBroadcast(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'broadcast',
+    'What is the broadcast bean name?'
+  );
+}
+
 export async function beanSchedule(resource: Uri) {
   await beanGeneral_common(
     resource,

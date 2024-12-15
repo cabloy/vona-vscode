@@ -16,6 +16,7 @@ import {
   beanSummerCache,
   beanStartup,
   beanQueue,
+  beanBroadcast,
   beanSchedule,
   createEntity,
   createModel,
@@ -68,6 +69,7 @@ const extensionCommands = [
   { command: 'vona.beanSummerCache', function: beanSummerCache },
   { command: 'vona.beanStartup', function: beanStartup },
   { command: 'vona.beanQueue', function: beanQueue },
+  { command: 'vona.beanBroadcast', function: beanBroadcast },
   { command: 'vona.beanSchedule', function: beanSchedule },
   // init
   { command: 'vona.initConfig', function: initConfig },
