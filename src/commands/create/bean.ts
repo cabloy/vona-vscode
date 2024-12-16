@@ -134,6 +134,22 @@ export async function beanSchedule(resource: Uri) {
   );
 }
 
+export async function beanEventEmitter(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'eventEmitter',
+    'What is the eventEmitter bean name?'
+  );
+}
+
+export async function beanEventListener(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'eventListener',
+    'What is the eventListener bean name?'
+  );
+}
+
 export async function createEntity(resource: Uri) {
   await beanGeneral_common(resource, 'entity', 'What is the entity name?');
 }
