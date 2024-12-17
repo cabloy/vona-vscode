@@ -18,7 +18,7 @@ import {
   beanQueue,
   beanBroadcast,
   beanSchedule,
-  beanEventEmitter,
+  beanEvent,
   beanEventListener,
   createEntity,
   createModel,
@@ -73,7 +73,7 @@ const extensionCommands = [
   { command: 'vona.beanQueue', function: beanQueue },
   { command: 'vona.beanBroadcast', function: beanBroadcast },
   { command: 'vona.beanSchedule', function: beanSchedule },
-  { command: 'vona.beanEventEmitter', function: beanEventEmitter },
+  { command: 'vona.beanEvent', function: beanEvent },
   { command: 'vona.beanEventListener', function: beanEventListener },
   // init
   { command: 'vona.initConfig', function: initConfig },

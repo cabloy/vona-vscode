@@ -134,12 +134,8 @@ export async function beanSchedule(resource: Uri) {
   );
 }
 
-export async function beanEventEmitter(resource: Uri) {
-  await beanGeneral_common(
-    resource,
-    'eventEmitter',
-    'What is the eventEmitter bean name?'
-  );
+export async function beanEvent(resource: Uri) {
+  await beanGeneral_common(resource, 'event', 'What is the event bean name?');
 }
 
 export async function beanEventListener(resource: Uri) {
