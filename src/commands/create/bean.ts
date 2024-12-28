@@ -107,6 +107,15 @@ export async function beanMetaStatic(resource: Uri) {
   );
 }
 
+export async function beanMetaPrintApiPath(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'meta',
+    'What is the meta printApiPath bean name?',
+    'printApiPath'
+  );
+}
+
 export async function beanSummerCache(resource: Uri) {
   await beanGeneral_common(
     resource,
