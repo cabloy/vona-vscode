@@ -23,6 +23,8 @@ import {
   beanMetaRedlock,
   beanMetaStatic,
   beanMetaPrintApiPath,
+  beanMetaCacheMem,
+  beanMetaCacheRedis,
   createEntity,
   createModel,
   createDto,
@@ -81,6 +83,8 @@ const extensionCommands = [
   { command: 'vona.beanMetaRedlock', function: beanMetaRedlock },
   { command: 'vona.beanMetaStatic', function: beanMetaStatic },
   { command: 'vona.beanMetaPrintApiPath', function: beanMetaPrintApiPath },
+  { command: 'vona.beanMetaCacheMem', function: beanMetaCacheMem },
+  { command: 'vona.beanMetaCacheRedis', function: beanMetaCacheRedis },
   // init
   { command: 'vona.initConfig', function: initConfig },
   { command: 'vona.initConstant', function: initConstant },

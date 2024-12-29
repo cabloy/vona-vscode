@@ -116,6 +116,24 @@ export async function beanMetaPrintApiPath(resource: Uri) {
   );
 }
 
+export async function beanMetaCacheMem(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'meta',
+    'What is the meta cacheMem bean name?',
+    'cacheMem'
+  );
+}
+
+export async function beanMetaCacheRedis(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'meta',
+    'What is the meta cacheRedis bean name?',
+    'cacheRedis'
+  );
+}
+
 export async function beanSummerCache(resource: Uri) {
   await beanGeneral_common(
     resource,
