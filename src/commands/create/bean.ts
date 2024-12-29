@@ -116,24 +116,6 @@ export async function beanMetaPrintApiPath(resource: Uri) {
   );
 }
 
-export async function beanMetaCacheMem(resource: Uri) {
-  await beanGeneral_common(
-    resource,
-    'meta',
-    'What is the meta cacheMem bean name?',
-    'cacheMem'
-  );
-}
-
-export async function beanMetaCacheRedis(resource: Uri) {
-  await beanGeneral_common(
-    resource,
-    'meta',
-    'What is the meta cacheRedis bean name?',
-    'cacheRedis'
-  );
-}
-
 export async function beanSummerCache(resource: Uri) {
   await beanGeneral_common(
     resource,
@@ -187,6 +169,22 @@ export async function beanDatabaseDialect(resource: Uri) {
     resource,
     'databaseDialect',
     'What is the databaseDialect bean name?'
+  );
+}
+
+export async function beanCacheMem(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'cacheMem',
+    'What is the cacheMem bean name?'
+  );
+}
+
+export async function beanCacheRedis(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'cacheRedis',
+    'What is the cacheRedis bean name?'
   );
 }
 
