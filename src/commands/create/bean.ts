@@ -26,6 +26,14 @@ export async function beanMiddleware(resource: Uri) {
   );
 }
 
+export async function beanMiddlewareSystem(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'middlewareSystem',
+    'What is the middlewareSystem bean name?'
+  );
+}
+
 export async function beanGuard(resource: Uri) {
   await beanGeneral_common(resource, 'guard', 'What is the guard bean name?');
 }
