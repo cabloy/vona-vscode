@@ -106,6 +106,15 @@ export async function beanMetaRedlock(resource: Uri) {
   );
 }
 
+export async function beanMetaElection(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'meta',
+    'What is the meta election bean name?',
+    'election'
+  );
+}
+
 export async function beanMetaStatic(resource: Uri) {
   await beanGeneral_common(
     resource,
