@@ -147,19 +147,10 @@ export async function invokeVonaCli(
     !forceGlobalCli &&
     existsSync(path.join(workspaceFolder, 'packages-cli'))
   ) {
-    await processHelper.spawnCmd({
-      cmd: 'tsc',
-      args: ['-b'],
-      options: {
-        stdio: 'pipe',
-        cwd: path.join(workspaceFolder, 'packages-cli'),
-        shell: true,
-      },
-    });
     res = await processHelper.spawnExe({
       cmd: 'node',
       args: [
-        path.join(workspaceFolder, 'packages-cli/cli/dist/bin/vona.js'),
+        path.join(workspaceFolder, 'packages-cli/cli/src/bin/vona.ts'),
       ].concat(args),
       options: {
         stdio: 'pipe',
