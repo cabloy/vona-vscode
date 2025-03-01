@@ -4,7 +4,7 @@
   "description": "An extension for Vona offering commands and tools to make your experience more pleasant.",
   "version": "0.0.48",
   "engines": {
-    "vscode": "^1.92.0"
+    "vscode": "^1.97.2"
   },
   "categories": [
     "Programming Languages",
@@ -76,6 +76,11 @@
       {
         "command": "vona.beanAop",
         "title": "Aop",
+        "category": "Vona Bean"
+      },
+      {
+        "command": "vona.beanAopMethod",
+        "title": "Aop Method",
         "category": "Vona Bean"
       },
       {
@@ -287,6 +292,10 @@
           "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
+          "command": "vona.beanAopMethod",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
+        },
+        {
           "command": "vona.beanMiddleware",
           "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
@@ -492,6 +501,10 @@
         },
         {
           "command": "vona.beanAop",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean$/)"
+        },
+        {
+          "command": "vona.beanAopMethod",
           "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean$/)"
         },
         {

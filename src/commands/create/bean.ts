@@ -18,6 +18,14 @@ export async function beanAop(resource: Uri) {
   await beanGeneral_common(resource, 'aop', 'What is the aop bean name?');
 }
 
+export async function beanAopMethod(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'aopMethod',
+    'What is the aop method bean name?'
+  );
+}
+
 export async function beanMiddleware(resource: Uri) {
   await beanGeneral_common(
     resource,

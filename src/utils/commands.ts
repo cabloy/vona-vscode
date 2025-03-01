@@ -2,6 +2,7 @@ import { commands, ExtensionContext, window } from 'vscode';
 import {
   beanGlobal,
   beanAop,
+  beanAopMethod,
   beanMiddleware,
   beanMiddlewareSystem,
   beanGuard,
@@ -64,6 +65,7 @@ const extensionCommands = [
   // bean
   { command: 'vona.beanGlobal', function: beanGlobal },
   { command: 'vona.beanAop', function: beanAop },
+  { command: 'vona.beanAopMethod', function: beanAopMethod },
   { command: 'vona.beanMiddleware', function: beanMiddleware },
   { command: 'vona.beanMiddlewareSystem', function: beanMiddlewareSystem },
   { command: 'vona.beanGuard', function: beanGuard },
