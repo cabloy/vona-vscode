@@ -152,6 +152,7 @@ export async function invokeVonaCli(
     res = await processHelper.spawnExe({
       cmd: 'node',
       args: [
+        '--experimental-transform-types',
         path.join(workspaceFolder, 'packages-cli/cli/src/bin/vona.ts'),
       ].concat(args),
       options: {
