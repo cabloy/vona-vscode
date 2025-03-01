@@ -2,7 +2,7 @@
   "name": "vona-vscode",
   "displayName": "Vona - Official",
   "description": "An extension for Vona offering commands and tools to make your experience more pleasant.",
-  "version": "0.0.48",
+  "version": "0.0.49",
   "engines": {
     "vscode": "^1.97.2"
   },
