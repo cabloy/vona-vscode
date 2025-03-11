@@ -132,12 +132,12 @@ export async function beanMetaStatic(resource: Uri) {
   );
 }
 
-export async function beanMetaPrintApiPath(resource: Uri) {
+export async function beanMetaPrintTip(resource: Uri) {
   await beanGeneral_common(
     resource,
     'meta',
-    'What is the meta printApiPath bean name?',
-    'printApiPath'
+    'What is the meta printTip bean name?',
+    'printTip'
   );
 }
 

@@ -27,7 +27,7 @@ import {
   beanMetaRedlock,
   beanMetaElection,
   beanMetaStatic,
-  beanMetaPrintApiPath,
+  beanMetaPrintTip,
   createEntity,
   createModel,
   createDto,
@@ -90,7 +90,7 @@ const extensionCommands = [
   { command: 'vona.beanMetaRedlock', function: beanMetaRedlock },
   { command: 'vona.beanMetaElection', function: beanMetaElection },
   { command: 'vona.beanMetaStatic', function: beanMetaStatic },
-  { command: 'vona.beanMetaPrintApiPath', function: beanMetaPrintApiPath },
+  { command: 'vona.beanMetaPrintTip', function: beanMetaPrintTip },
   // init
   { command: 'vona.initConfig', function: initConfig },
   { command: 'vona.initConstant', function: initConstant },
