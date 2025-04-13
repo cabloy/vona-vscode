@@ -149,6 +149,14 @@ export async function beanSummerCache(resource: Uri) {
   );
 }
 
+export async function beanSsrSite(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'ssrSite',
+    'What is the ssr site bean name?'
+  );
+}
+
 export async function beanStartup(resource: Uri) {
   await beanGeneral_common(
     resource,
