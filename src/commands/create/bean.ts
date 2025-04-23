@@ -160,7 +160,7 @@ export async function beanSsrSite(resource: Uri) {
 export async function beanSsrMenuGroup(resource: Uri) {
   await beanGeneral_common(
     resource,
-    'ssrSite',
+    'ssrMenuGroup',
     'What is the ssr menu group bean name?'
   );
 }
@@ -168,7 +168,7 @@ export async function beanSsrMenuGroup(resource: Uri) {
 export async function beanSsrMenuItem(resource: Uri) {
   await beanGeneral_common(
     resource,
-    'ssrSite',
+    'ssrMenuItem',
     'What is the ssr menu item bean name?'
   );
 }
@@ -176,7 +176,7 @@ export async function beanSsrMenuItem(resource: Uri) {
 export async function beanSsrMenuItems(resource: Uri) {
   await beanGeneral_common(
     resource,
-    'ssrSite',
+    'ssrMenuItems',
     'What is the ssr menu items bean name?'
   );
 }
