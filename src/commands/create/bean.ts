@@ -165,19 +165,11 @@ export async function beanSsrMenuGroup(resource: Uri) {
   );
 }
 
-export async function beanSsrMenuItem(resource: Uri) {
+export async function beanSsrMenu(resource: Uri) {
   await beanGeneral_common(
     resource,
-    'ssrMenuItem',
-    'What is the ssr menu item bean name?'
-  );
-}
-
-export async function beanSsrMenuItems(resource: Uri) {
-  await beanGeneral_common(
-    resource,
-    'ssrMenuItems',
-    'What is the ssr menu items bean name?'
+    'ssrMenu',
+    'What is the ssr menu bean name?'
   );
 }
 
