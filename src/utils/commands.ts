@@ -44,7 +44,7 @@ import { ProcessHelper } from '@cabloy/process-helper';
 import { getWorkspaceRootDirectory } from './vona.js';
 import { existsSync } from 'fs-extra';
 import path from 'node:path';
-import { toolsMetadata } from '../commands/tools/metadata.js';
+import { toolsCrud, toolsMetadata } from '../commands/tools/metadata.js';
 import { initConfig } from '../commands/init/config.js';
 import { initConstant } from '../commands/init/constant.js';
 import { initLocale } from '../commands/init/locale.js';
@@ -110,6 +110,7 @@ const extensionCommands = [
   // refactor
   // tools
   { command: 'vona.toolsMetadata', function: toolsMetadata },
+  { command: 'vona.toolsCrud', function: toolsCrud },
 ];
 
 export class Commands {
