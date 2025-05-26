@@ -115,12 +115,12 @@
       },
       {
         "command": "vona.beanSocketConnection",
-        "title": "Socket Connection",
+        "title": "[Cabloy] Socket Connection",
         "category": "Vona Bean"
       },
       {
         "command": "vona.beanSocketPacket",
-        "title": "Socket Packet",
+        "title": "[Cabloy] Socket Packet",
         "category": "Vona Bean"
       },
       {
@@ -130,17 +130,17 @@
       },
       {
         "command": "vona.beanSsrSite",
-        "title": "Ssr Site",
+        "title": "[Cabloy] Ssr Site",
         "category": "Vona Bean"
       },
       {
         "command": "vona.beanSsrMenuGroup",
-        "title": "Ssr Menu Group",
+        "title": "[Cabloy] Ssr Menu Group",
         "category": "Vona Bean"
       },
       {
         "command": "vona.beanSsrMenu",
-        "title": "Ssr Menu",
+        "title": "[Cabloy] Ssr Menu",
         "category": "Vona Bean"
       },
       {
@@ -205,7 +205,7 @@
       },
       {
         "command": "vona.beanMetaStatus",
-        "title": "Status",
+        "title": "[Cabloy] Status",
         "category": "Vona Meta"
       },
       {
