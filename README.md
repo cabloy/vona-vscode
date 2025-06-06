@@ -4,51 +4,24 @@ An extension offering commands and tools to make your experience with Vona more 
 
 ## Features
 
+### Vona Bean
+
+![](./assets/screenshot/1.png)
+
 ### Vona Create
 
-- Suite
-- Module
-- Page
-- Component
-- Service
-- Mock
-
-- Bean: Local
-- Bean: Model
-- Bean: Store
-- Bean: Style
-- Bean: Theme
-- Bean: Tool
-- Bean: General
+![](./assets/screenshot/2.png)
 
 ### Vona Init
 
-- Icon
-- Config
-- Constant
-- Locale
-- Error
-- Legacy
-- Monkey
+![](./assets/screenshot/3.png)
 
-### Vona Refactor
+### Vona Meta
 
-- Add Page Query
-- Add Page Params
-- Rename Page
-
-- Add Component Props
-- Add Component Emits
-- Add Component Slots
-- Add v-model
-- Convert to Generic Component
-- Rename Component
-
-- Create Another Render Bean
-- Create Another Style Bean
+![](./assets/screenshot/4.png)
 
 ### Vona Tools
 
-- Generate .metadata
+![](./assets/screenshot/5.png)
 
 **Enjoy!**
