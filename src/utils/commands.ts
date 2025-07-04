@@ -52,6 +52,8 @@ import { initError } from '../commands/init/error.js';
 import { initMonkey } from '../commands/init/monkey.js';
 import { initMain } from '../commands/init/main.js';
 import { initStatic } from '../commands/init/static.js';
+import { initLib } from '../commands/init/lib.js';
+import { initTypes } from '../commands/init/types.js';
 import { createModule } from '../commands/create/module.js';
 import { createSuite } from '../commands/create/suite.js';
 import { createTest } from '../commands/create/test.js';
@@ -107,6 +109,8 @@ const extensionCommands = [
   { command: 'vona.initMonkey', function: initMonkey },
   { command: 'vona.initMain', function: initMain },
   { command: 'vona.initStatic', function: initStatic },
+  { command: 'vona.initLib', function: initLib },
+  { command: 'vona.initTypes', function: initTypes },
   // refactor
   // tools
   { command: 'vona.toolsMetadata', function: toolsMetadata },
