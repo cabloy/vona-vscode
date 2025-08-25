@@ -245,6 +245,14 @@ export async function beanAuthProvider(resource: Uri) {
   );
 }
 
+export async function beanCaptchaProvider(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'captchaProvider',
+    'What is the captchaProvider bean name?'
+  );
+}
+
 export async function createEntity(resource: Uri) {
   await beanGeneral_common(resource, 'entity', 'What is the entity name?');
 }
