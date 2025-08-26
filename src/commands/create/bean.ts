@@ -253,11 +253,11 @@ export async function beanCaptchaProvider(resource: Uri) {
   );
 }
 
-export async function beanCaptcha(resource: Uri) {
+export async function beanCaptchaScene(resource: Uri) {
   await beanGeneral_common(
     resource,
-    'captcha',
-    'What is the captcha bean name?'
+    'captchaScene',
+    'What is the captchaScene bean name?'
   );
 }
 
