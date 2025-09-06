@@ -261,14 +261,6 @@ export async function beanCaptchaScene(resource: Uri) {
   );
 }
 
-export async function beanMailProvider(resource: Uri) {
-  await beanGeneral_common(
-    resource,
-    'mailProvider',
-    'What is the mailProvider bean name?'
-  );
-}
-
 export async function createEntity(resource: Uri) {
   await beanGeneral_common(resource, 'entity', 'What is the entity name?');
 }
