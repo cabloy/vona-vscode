@@ -261,6 +261,14 @@ export async function beanCaptchaScene(resource: Uri) {
   );
 }
 
+export async function beanZodRefine(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'zodRefine',
+    'What is the zodRefine bean name?'
+  );
+}
+
 export async function createEntity(resource: Uri) {
   await beanGeneral_common(resource, 'entity', 'What is the entity name?');
 }
