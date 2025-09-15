@@ -269,6 +269,14 @@ export async function beanZodRefine(resource: Uri) {
   );
 }
 
+export async function beanZodTransform(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'zodTransform',
+    'What is the zodTransform bean name?'
+  );
+}
+
 export async function createEntity(resource: Uri) {
   await beanGeneral_common(resource, 'entity', 'What is the entity name?');
 }
