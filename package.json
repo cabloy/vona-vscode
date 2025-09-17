@@ -70,7 +70,7 @@
       },
       {
         "command": "vona.beanGlobal",
-        "title": "Global",
+        "title": "Global Service",
         "category": "Vona Bean"
       },
       {
