@@ -277,6 +277,14 @@ export async function beanZodTransform(resource: Uri) {
   );
 }
 
+export async function beanSerializer(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'serializer',
+    'What is the serializer bean name?'
+  );
+}
+
 export async function createEntity(resource: Uri) {
   await beanGeneral_common(resource, 'entity', 'What is the entity name?');
 }
