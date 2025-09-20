@@ -277,11 +277,11 @@ export async function beanZodTransform(resource: Uri) {
   );
 }
 
-export async function beanSerializer(resource: Uri) {
+export async function beanSerializerTransform(resource: Uri) {
   await beanGeneral_common(
     resource,
-    'serializer',
-    'What is the serializer bean name?'
+    'serializerTransform',
+    'What is the serializerTransform bean name?'
   );
 }
 
