@@ -34,6 +34,16 @@ export async function beanMiddleware(resource: Uri) {
   );
 }
 
+export async function beanMiddlewareGlobal(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'middleware',
+    'What is the middleware global bean name?',
+    undefined,
+    'cli/middlewareGlobal/boilerplate'
+  );
+}
+
 export async function beanMiddlewareSystem(resource: Uri) {
   await beanGeneral_common(
     resource,
@@ -313,7 +323,8 @@ export async function beanGeneral_common(
   resource: Uri,
   sceneName: string,
   prompt: string,
-  name?: string
+  name?: string,
+  boilerplate?: string
 ) {
   const { fromPalette, fsPath } = preparePathResource(resource);
   if (!fsPath) {
@@ -344,6 +355,7 @@ export async function beanGeneral_common(
       sceneName,
       pathResource,
       `--module=${commandPathInfo.moduleName}`,
+      `--boilerplate=${boilerplate || ''}`,
     ],
     commandPathInfo.projectCurrent
   );

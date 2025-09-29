@@ -84,6 +84,11 @@
         "category": "Vona Aspect"
       },
       {
+        "command": "vona.beanMiddlewareGlobal",
+        "title": "Middleware Global",
+        "category": "Vona Aspect"
+      },
+      {
         "command": "vona.beanMiddlewareSystem",
         "title": "Middleware System",
         "category": "Vona Aspect"
@@ -360,6 +365,10 @@
           "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
+          "command": "vona.beanMiddlewareGlobal",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
+        },
+        {
           "command": "vona.beanMiddlewareSystem",
           "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
@@ -618,6 +627,10 @@
         },
         {
           "command": "vona.beanMiddleware",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean$/)"
+        },
+        {
+          "command": "vona.beanMiddlewareGlobal",
           "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean$/)"
         },
         {
