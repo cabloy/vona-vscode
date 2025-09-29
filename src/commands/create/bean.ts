@@ -74,6 +74,16 @@ export async function beanInterceptor(resource: Uri) {
   );
 }
 
+export async function beanInterceptorGlobal(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'interceptor',
+    'What is the interceptor bean name?',
+    undefined,
+    'cli/interceptorGlobal/boilerplate'
+  );
+}
+
 export async function beanPipe(resource: Uri) {
   await beanGeneral_common(resource, 'pipe', 'What is the pipe bean name?');
 }
