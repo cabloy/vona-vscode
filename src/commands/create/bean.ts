@@ -56,6 +56,16 @@ export async function beanGuard(resource: Uri) {
   await beanGeneral_common(resource, 'guard', 'What is the guard bean name?');
 }
 
+export async function beanGuardGlobal(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'guard',
+    'What is the guard global bean name?',
+    undefined,
+    'cli/guardGlobal/boilerplate'
+  );
+}
+
 export async function beanInterceptor(resource: Uri) {
   await beanGeneral_common(
     resource,
