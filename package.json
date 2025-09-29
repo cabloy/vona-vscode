@@ -69,11 +69,6 @@
         "category": "Vona Create"
       },
       {
-        "command": "vona.beanGlobal",
-        "title": "Global Service",
-        "category": "Vona Bean"
-      },
-      {
         "command": "vona.beanAop",
         "title": "Aop",
         "category": "Vona Bean"
@@ -111,6 +106,11 @@
       {
         "command": "vona.beanFilter",
         "title": "Filter",
+        "category": "Vona Bean"
+      },
+      {
+        "command": "vona.beanGlobal",
+        "title": "Global Service",
         "category": "Vona Bean"
       },
       {
