@@ -78,7 +78,7 @@ export async function beanInterceptorGlobal(resource: Uri) {
   await beanGeneral_common(
     resource,
     'interceptor',
-    'What is the interceptor bean name?',
+    'What is the interceptor global bean name?',
     undefined,
     'cli/interceptorGlobal/boilerplate'
   );
@@ -92,7 +92,7 @@ export async function beanPipeGlobal(resource: Uri) {
   await beanGeneral_common(
     resource,
     'pipe',
-    'What is the pipe Global bean name?',
+    'What is the pipe global bean name?',
     undefined,
     'cli/pipeGlobal/boilerplate'
   );
@@ -100,6 +100,16 @@ export async function beanPipeGlobal(resource: Uri) {
 
 export async function beanFilter(resource: Uri) {
   await beanGeneral_common(resource, 'filter', 'What is the filter bean name?');
+}
+
+export async function beanFilterGlobal(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'filter',
+    'What is the filter global bean name?',
+    undefined,
+    'cli/filterGlobal/boilerplate'
+  );
 }
 
 export async function beanSocketConnection(resource: Uri) {
