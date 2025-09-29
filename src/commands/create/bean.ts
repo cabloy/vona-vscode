@@ -88,6 +88,16 @@ export async function beanPipe(resource: Uri) {
   await beanGeneral_common(resource, 'pipe', 'What is the pipe bean name?');
 }
 
+export async function beanPipeGlobal(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'pipe',
+    'What is the pipe Global bean name?',
+    undefined,
+    'cli/pipeGlobal/boilerplate'
+  );
+}
+
 export async function beanFilter(resource: Uri) {
   await beanGeneral_common(resource, 'filter', 'What is the filter bean name?');
 }
