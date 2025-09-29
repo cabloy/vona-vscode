@@ -71,42 +71,42 @@
       {
         "command": "vona.beanAop",
         "title": "Aop",
-        "category": "Vona Bean"
+        "category": "Vona Aspect"
       },
       {
         "command": "vona.beanAopMethod",
         "title": "Aop Method",
-        "category": "Vona Bean"
+        "category": "Vona Aspect"
       },
       {
         "command": "vona.beanMiddleware",
         "title": "Middleware",
-        "category": "Vona Bean"
+        "category": "Vona Aspect"
       },
       {
         "command": "vona.beanMiddlewareSystem",
         "title": "Middleware System",
-        "category": "Vona Bean"
+        "category": "Vona Aspect"
       },
       {
         "command": "vona.beanGuard",
         "title": "Guard",
-        "category": "Vona Bean"
+        "category": "Vona Aspect"
       },
       {
         "command": "vona.beanInterceptor",
         "title": "Interceptor",
-        "category": "Vona Bean"
+        "category": "Vona Aspect"
       },
       {
         "command": "vona.beanPipe",
         "title": "Pipe",
-        "category": "Vona Bean"
+        "category": "Vona Aspect"
       },
       {
         "command": "vona.beanFilter",
         "title": "Filter",
-        "category": "Vona Bean"
+        "category": "Vona Aspect"
       },
       {
         "command": "vona.beanGlobal",
@@ -543,6 +543,11 @@
           "when": "vona.hasVonaProject"
         },
         {
+          "submenu": "vona.aspect",
+          "group": "navigation",
+          "when": "vona.hasVonaProject"
+        },
+        {
           "submenu": "vona.bean",
           "group": "navigation",
           "when": "vona.hasVonaProject"
@@ -602,11 +607,7 @@
           "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /(\\/|\\\\)test$/)"
         }
       ],
-      "vona.bean": [
-        {
-          "command": "vona.beanGlobal",
-          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean$/)"
-        },
+      "vona.aspect": [
         {
           "command": "vona.beanAop",
           "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean$/)"
@@ -637,6 +638,12 @@
         },
         {
           "command": "vona.beanFilter",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean$/)"
+        }
+      ],
+      "vona.bean": [
+        {
+          "command": "vona.beanGlobal",
           "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)bean$/)"
         },
         {
@@ -808,6 +815,10 @@
       {
         "id": "vona.create",
         "label": "Vona Create"
+      },
+      {
+        "id": "vona.aspect",
+        "label": "Vona Aspect"
       },
       {
         "id": "vona.bean",
