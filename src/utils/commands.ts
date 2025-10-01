@@ -1,6 +1,5 @@
 import { commands, ExtensionContext, window } from 'vscode';
 import {
-  beanGlobal,
   beanAop,
   beanAopMethod,
   beanMiddleware,
@@ -46,6 +45,7 @@ import {
   createModel,
   createDto,
   createService,
+  createServiceGlobal,
   createController,
 } from '../commands/create/bean.js';
 import { logger } from './outputChannel.js';
@@ -76,10 +76,10 @@ const extensionCommands = [
   { command: 'vona.createEntity', function: createEntity },
   { command: 'vona.createModel', function: createModel },
   { command: 'vona.createService', function: createService },
+  { command: 'vona.createServiceGlobal', function: createServiceGlobal },
   { command: 'vona.createController', function: createController },
   { command: 'vona.createTest', function: createTest },
   // bean
-  { command: 'vona.beanGlobal', function: beanGlobal },
   { command: 'vona.beanAop', function: beanAop },
   { command: 'vona.beanAopMethod', function: beanAopMethod },
   { command: 'vona.beanMiddleware', function: beanMiddleware },

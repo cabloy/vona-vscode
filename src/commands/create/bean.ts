@@ -10,10 +10,6 @@ import path from 'node:path';
 import { invokeVonaCli } from '../../utils/commands.js';
 import { showTextDocument } from '../../utils/global.js';
 
-export async function beanGlobal(resource: Uri) {
-  await beanGeneral_common(resource, 'bean', 'What is the global bean name?');
-}
-
 export async function beanAop(resource: Uri) {
   await beanGeneral_common(resource, 'aop', 'What is the aop bean name?');
 }
@@ -349,6 +345,14 @@ export async function createDto(resource: Uri) {
 
 export async function createService(resource: Uri) {
   await beanGeneral_common(resource, 'service', 'What is the service name?');
+}
+
+export async function createServiceGlobal(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'bean',
+    'What is the global service name?'
+  );
 }
 
 export async function createController(resource: Uri) {
