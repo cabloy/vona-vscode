@@ -36,7 +36,7 @@ export async function beanMiddlewareGlobal(resource: Uri) {
     'middleware',
     'What is the middleware global bean name?',
     undefined,
-    'cli/middlewareGlobal/boilerplate'
+    'global'
   );
 }
 
@@ -58,7 +58,7 @@ export async function beanGuardGlobal(resource: Uri) {
     'guard',
     'What is the guard global bean name?',
     undefined,
-    'cli/guardGlobal/boilerplate'
+    'global'
   );
 }
 
@@ -76,7 +76,7 @@ export async function beanInterceptorGlobal(resource: Uri) {
     'interceptor',
     'What is the interceptor global bean name?',
     undefined,
-    'cli/interceptorGlobal/boilerplate'
+    'global'
   );
 }
 
@@ -90,7 +90,7 @@ export async function beanPipeGlobal(resource: Uri) {
     'pipe',
     'What is the pipe global bean name?',
     undefined,
-    'cli/pipeGlobal/boilerplate'
+    'global'
   );
 }
 
@@ -104,7 +104,7 @@ export async function beanFilterGlobal(resource: Uri) {
     'filter',
     'What is the filter global bean name?',
     undefined,
-    'cli/filterGlobal/boilerplate'
+    'global'
   );
 }
 
