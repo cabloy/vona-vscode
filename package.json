@@ -324,6 +324,11 @@
         "category": "Vona Init"
       },
       {
+        "command": "vona.initAppMonkey",
+        "title": "App Monkey",
+        "category": "Vona Init"
+      },
+      {
         "command": "vona.toolsMetadata",
         "title": "Generate .metadata",
         "category": "Vona Tools"
@@ -570,6 +575,10 @@
         },
         {
           "command": "vona.initTypes",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
+        },
+        {
+          "command": "vona.initAppMonkey",
           "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
@@ -862,6 +871,10 @@
         {
           "command": "vona.initTypes",
           "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/)"
+        },
+        {
+          "command": "vona.initAppMonkey",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath in vona.arrayProjectRoot || resourcePath in vona.arrayProjectSrc)"
         }
       ],
       "vona.refactor": [],
