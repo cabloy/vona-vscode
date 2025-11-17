@@ -315,12 +315,12 @@
       },
       {
         "command": "vona.initStatic",
-        "title": "Resources Static",
+        "title": "Assets Static",
         "category": "Vona Init"
       },
       {
         "command": "vona.initAsset",
-        "title": "Resources Asset",
+        "title": "Assets",
         "category": "Vona Init"
       },
       {
