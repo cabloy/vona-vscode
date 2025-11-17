@@ -319,6 +319,11 @@
         "category": "Vona Init"
       },
       {
+        "command": "vona.initAsset",
+        "title": "Asset Resources",
+        "category": "Vona Init"
+      },
+      {
         "command": "vona.initLib",
         "title": "Lib",
         "category": "Vona Init"
@@ -576,6 +581,10 @@
         },
         {
           "command": "vona.initStatic",
+          "when": "vona.hasVonaProject && vona.currentVonaProject"
+        },
+        {
+          "command": "vona.initAsset",
           "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
@@ -875,6 +884,10 @@
         },
         {
           "command": "vona.initStatic",
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/)"
+        },
+        {
+          "command": "vona.initAsset",
           "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/)"
         },
         {

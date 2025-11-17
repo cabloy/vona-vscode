@@ -63,6 +63,7 @@ import { initError } from '../commands/init/error.js';
 import { initMonkey } from '../commands/init/monkey.js';
 import { initMain } from '../commands/init/main.js';
 import { initStatic } from '../commands/init/static.js';
+import { initAsset } from '../commands/init/asset.js';
 import { initLib } from '../commands/init/lib.js';
 import { initTypes } from '../commands/init/types.js';
 import { initAppMonkey } from '../commands/init/appMonkey.js';
@@ -135,6 +136,7 @@ const extensionCommands = [
   { command: 'vona.initMonkey', function: initMonkey },
   { command: 'vona.initMain', function: initMain },
   { command: 'vona.initStatic', function: initStatic },
+  { command: 'vona.initAsset', function: initAsset },
   { command: 'vona.initLib', function: initLib },
   { command: 'vona.initTypes', function: initTypes },
   { command: 'vona.initAppMonkey', function: initAppMonkey },
