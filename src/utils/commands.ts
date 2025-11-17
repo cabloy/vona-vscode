@@ -40,6 +40,7 @@ import {
   beanMetaRedlock,
   beanMetaElection,
   beanMetaStatic,
+  beanMetaAsset,
   beanMetaPrintTip,
   createEntity,
   createModel,
@@ -124,6 +125,7 @@ const extensionCommands = [
   { command: 'vona.beanMetaRedlock', function: beanMetaRedlock },
   { command: 'vona.beanMetaElection', function: beanMetaElection },
   { command: 'vona.beanMetaStatic', function: beanMetaStatic },
+  { command: 'vona.beanMetaAsset', function: beanMetaAsset },
   { command: 'vona.beanMetaPrintTip', function: beanMetaPrintTip },
   // init
   { command: 'vona.initConfig', function: initConfig },

@@ -178,6 +178,15 @@ export async function beanMetaStatic(resource: Uri) {
   );
 }
 
+export async function beanMetaAsset(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'meta',
+    'What is the meta asset bean name?',
+    'asset'
+  );
+}
+
 export async function beanMetaPrintTip(resource: Uri) {
   await beanGeneral_common(
     resource,
