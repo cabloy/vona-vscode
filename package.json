@@ -15,7 +15,8 @@
   "activationEvents": [
     "onStartupFinished"
   ],
-  "main": "./dist/index.js",
+  "type": "module",
+  "main": "./dist/index.cjs",
   "icon": "assets/vona.png",
   "publisher": "cabloy",
   "license": "MIT",
@@ -967,7 +968,7 @@
   },
   "dependencies": {
     "@cabloy/process-helper": "^2.0.21",
-    "@npmcli/config": "^8.3.4",
+    "@npmcli/config": "^10.4.2",
     "fs-extra": "^11.2.0",
     "semver": "^7.6.2"
   },
@@ -978,7 +979,7 @@
     "@types/vscode": "^1.92.0",
     "@typescript-eslint/eslint-plugin": "^7.14.1",
     "@typescript-eslint/parser": "^7.11.0",
-    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-cli": "^0.0.12",
     "@vscode/test-electron": "^2.4.0",
     "esbuild": "^0.21.5",
     "eslint": "^8.57.0",
