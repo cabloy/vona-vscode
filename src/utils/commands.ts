@@ -42,6 +42,7 @@ import {
   beanMetaStatic,
   beanMetaAsset,
   beanMetaPrintTip,
+  beanMetaRuntime,
   createEntity,
   createModel,
   createDto,
@@ -128,6 +129,7 @@ const extensionCommands = [
   { command: 'vona.beanMetaStatic', function: beanMetaStatic },
   { command: 'vona.beanMetaAsset', function: beanMetaAsset },
   { command: 'vona.beanMetaPrintTip', function: beanMetaPrintTip },
+  { command: 'vona.beanMetaRuntime', function: beanMetaRuntime },
   // init
   { command: 'vona.initConfig', function: initConfig },
   { command: 'vona.initConstant', function: initConstant },

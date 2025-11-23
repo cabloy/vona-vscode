@@ -196,6 +196,15 @@ export async function beanMetaPrintTip(resource: Uri) {
   );
 }
 
+export async function beanMetaRuntime(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'meta',
+    'What is the meta runtime bean name?',
+    'runtime'
+  );
+}
+
 export async function beanSummerCache(resource: Uri) {
   await beanGeneral_common(
     resource,
