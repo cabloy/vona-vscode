@@ -349,6 +349,14 @@ export async function beanSerializerTransform(resource: Uri) {
   );
 }
 
+export async function beanFilterTransform(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'filterTransform',
+    'What is the filterTransform bean name?'
+  );
+}
+
 export async function createEntity(resource: Uri) {
   await beanGeneral_common(resource, 'entity', 'What is the entity name?');
 }
