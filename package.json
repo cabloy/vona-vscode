@@ -667,7 +667,7 @@
       "vona.create": [
         {
           "command": "vona.createSuite",
-          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite$/ || resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite-vendor$/)"
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite$/ || resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite-vendor$/ || resourcePath =~ /(\\/|\\\\)src(\\/|\\\\)suite-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/)"
         },
         {
           "command": "vona.createModule",
