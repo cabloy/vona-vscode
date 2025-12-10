@@ -357,6 +357,10 @@ export async function beanFilterTransform(resource: Uri) {
   );
 }
 
+export async function beanHmr(resource: Uri) {
+  await beanGeneral_common(resource, 'hmr', 'What is the hmr bean name?');
+}
+
 export async function createEntity(resource: Uri) {
   await beanGeneral_common(resource, 'entity', 'What is the entity name?');
 }

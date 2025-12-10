@@ -35,6 +35,7 @@ import {
   beanZodTransform,
   beanSerializerTransform,
   beanFilterTransform,
+  beanHmr,
   beanMetaIndex,
   beanMetaVersion,
   beanMetaStatus,
@@ -118,6 +119,7 @@ const extensionCommands = [
   { command: 'vona.beanCaptchaScene', function: beanCaptchaScene },
   { command: 'vona.beanZodRefine', function: beanZodRefine },
   { command: 'vona.beanZodTransform', function: beanZodTransform },
+  { command: 'vona.beanHmr', function: beanHmr },
   {
     command: 'vona.beanSerializerTransform',
     function: beanSerializerTransform,
