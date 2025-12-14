@@ -3,7 +3,7 @@ import {
   extractCommandPathInfo,
   preparePathResource,
 } from '../../utils/vona.js';
-import { invokeVonaCli } from '../../utils/commands.js';
+import { invokeToolsMetadata, invokeVonaCli } from '../../utils/commands.js';
 import path from 'node:path';
 import { showTextDocument } from '../../utils/global.js';
 
@@ -19,7 +19,12 @@ export async function initError(resource?: Uri) {
   }
   // invoke
   await invokeVonaCli(
-    [':init:error', commandPathInfo.moduleName],
+    [':init:error', commandPathInfo.moduleName, '--nometadata'],
+    commandPathInfo.projectCurrent
+  );
+  // metadata
+  invokeToolsMetadata(
+    commandPathInfo.moduleName,
     commandPathInfo.projectCurrent
   );
   // open
