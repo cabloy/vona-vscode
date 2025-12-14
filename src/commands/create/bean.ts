@@ -430,7 +430,13 @@ export async function beanGeneral_common(
       pathResource,
       `--module=${commandPathInfo.moduleName}`,
       `--boilerplate=${boilerplate || ''}`,
+      '--nometadata',
     ],
+    commandPathInfo.projectCurrent
+  );
+  // metadata
+  _invokeToolsMetadata(
+    commandPathInfo.moduleName,
     commandPathInfo.projectCurrent
   );
   // open
@@ -445,4 +451,12 @@ export async function beanGeneral_common(
     : `src/bean/${sceneName}.${pathResource}.ts`;
   const fileDest = path.join(commandPathInfo.moduleRoot, fileDestScene);
   showTextDocument(path.join(commandPathInfo.projectCurrent, fileDest));
+}
+
+async function _invokeToolsMetadata(
+  moduleName: string,
+  projectCurrent: string
+) {
+  // tools.deps
+  await invokeVonaCli([':tools:metadata', moduleName], projectCurrent);
 }
