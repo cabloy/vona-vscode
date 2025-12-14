@@ -183,6 +183,14 @@ function wrapperCommand(command, fn) {
   };
 }
 
+export async function invokeToolsMetadata(
+  moduleName: string,
+  projectCurrent: string
+) {
+  // tools.deps
+  await invokeVonaCli([':tools:metadata', moduleName], projectCurrent);
+}
+
 export async function invokeVonaCli(
   args: string[],
   projectCurrent: string,

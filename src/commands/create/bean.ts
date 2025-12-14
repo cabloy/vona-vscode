@@ -7,7 +7,7 @@ import {
 } from '../../utils/vona.js';
 import { LocalConsole } from '../../utils/console.js';
 import path from 'node:path';
-import { invokeVonaCli } from '../../utils/commands.js';
+import { invokeToolsMetadata, invokeVonaCli } from '../../utils/commands.js';
 import { showTextDocument } from '../../utils/global.js';
 
 export async function beanAop(resource: Uri) {
@@ -435,7 +435,7 @@ export async function beanGeneral_common(
     commandPathInfo.projectCurrent
   );
   // metadata
-  _invokeToolsMetadata(
+  invokeToolsMetadata(
     commandPathInfo.moduleName,
     commandPathInfo.projectCurrent
   );
@@ -451,12 +451,4 @@ export async function beanGeneral_common(
     : `src/bean/${sceneName}.${pathResource}.ts`;
   const fileDest = path.join(commandPathInfo.moduleRoot, fileDestScene);
   showTextDocument(path.join(commandPathInfo.projectCurrent, fileDest));
-}
-
-async function _invokeToolsMetadata(
-  moduleName: string,
-  projectCurrent: string
-) {
-  // tools.deps
-  await invokeVonaCli([':tools:metadata', moduleName], projectCurrent);
 }
