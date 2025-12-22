@@ -440,7 +440,7 @@ export async function beanGeneral_common(
     commandPathInfo.projectCurrent
   );
   // open
-  const fileDestScene = [
+  let fileDestScene = [
     'entity',
     'model',
     'dto',
@@ -449,6 +449,9 @@ export async function beanGeneral_common(
   ].includes(sceneName)
     ? `src/${sceneName}/${pathResource}.ts`
     : `src/bean/${sceneName}.${pathResource}.ts`;
+  if (['entity', 'dto'].includes(sceneName)) {
+    fileDestScene = `${fileDestScene}x`;
+  }
   const fileDest = path.join(commandPathInfo.moduleRoot, fileDestScene);
   showTextDocument(path.join(commandPathInfo.projectCurrent, fileDest));
 }
