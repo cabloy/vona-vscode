@@ -108,6 +108,14 @@ export async function beanFilterGlobal(resource: Uri) {
   );
 }
 
+export async function beanSocketNamespace(resource: Uri) {
+  await beanGeneral_common(
+    resource,
+    'socketNamespace',
+    'What is the socket namespace bean name?'
+  );
+}
+
 export async function beanSocketConnection(resource: Uri) {
   await beanGeneral_common(
     resource,
