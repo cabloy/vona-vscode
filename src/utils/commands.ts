@@ -59,7 +59,11 @@ import { ProcessHelper } from '@cabloy/process-helper';
 import { getWorkspaceRootDirectory } from './vona.js';
 import { existsSync } from 'fs-extra';
 import path from 'node:path';
-import { toolsCrud, toolsMetadata } from '../commands/tools/metadata.js';
+import {
+  toolsCrud,
+  toolsCrudCabloy,
+  toolsMetadata,
+} from '../commands/tools/metadata.js';
 import { initConfig } from '../commands/init/config.js';
 import { initConstant } from '../commands/init/constant.js';
 import { initLocale } from '../commands/init/locale.js';
@@ -152,6 +156,7 @@ const extensionCommands = [
   // tools
   { command: 'vona.toolsMetadata', function: toolsMetadata },
   { command: 'vona.toolsCrud', function: toolsCrud },
+  { command: 'vona.toolsCrudCabloy', function: toolsCrudCabloy },
 ];
 
 export class Commands {
@@ -166,8 +171,8 @@ export class Commands {
       this.context.subscriptions.push(
         commands.registerCommand(
           command,
-          wrapperCommand(command, commandFunction)
-        )
+          wrapperCommand(command, commandFunction),
+        ),
       );
     }
   }
@@ -187,7 +192,7 @@ function wrapperCommand(command, fn) {
 
 export async function invokeToolsMetadata(
   moduleName: string,
-  projectCurrent: string
+  projectCurrent: string,
 ) {
   // tools.deps
   await invokeVonaCli([':tools:metadata', moduleName], projectCurrent);
@@ -196,7 +201,7 @@ export async function invokeToolsMetadata(
 export async function invokeVonaCli(
   args: string[],
   projectCurrent: string,
-  forceGlobalCli?: boolean
+  forceGlobalCli?: boolean,
 ) {
   const console = new LocalConsole();
   const processHelper = new ProcessHelper(projectCurrent, console);

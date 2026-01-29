@@ -26,7 +26,7 @@ export async function toolsMetadata(resource?: Uri) {
   if (commandPathInfo.moduleName) {
     const fileDest = path.join(
       commandPathInfo.moduleRoot,
-      `src/.metadata/index.ts`
+      `src/.metadata/index.ts`,
     );
     showTextDocument(path.join(commandPathInfo.projectCurrent, fileDest));
   } else {
@@ -56,17 +56,54 @@ export async function toolsCrud(resource?: Uri) {
       `--module=${commandPathInfo.moduleName}`,
       '--nometadata',
     ],
-    commandPathInfo.projectCurrent
+    commandPathInfo.projectCurrent,
   );
   // metadata
   invokeToolsMetadata(
     commandPathInfo.moduleName,
-    commandPathInfo.projectCurrent
+    commandPathInfo.projectCurrent,
   );
   // open
   const fileDest = path.join(
     commandPathInfo.moduleRoot,
-    `src/controller/${name}.ts`
+    `src/controller/${name}.ts`,
+  );
+  showTextDocument(path.join(commandPathInfo.projectCurrent, fileDest));
+}
+
+export async function toolsCrudCabloy(resource?: Uri) {
+  const { fsPath } = preparePathResource(resource);
+  if (!fsPath) {
+    return;
+  }
+  // name
+  const name = await window.showInputBox({
+    prompt: 'What is the resource name?',
+  });
+  if (!name) {
+    return;
+  }
+  // commandPathInfo
+  const commandPathInfo = extractCommandPathInfo(fsPath);
+  // invoke
+  await invokeVonaCli(
+    [
+      `:tools:crudCabloy`,
+      name,
+      `--module=${commandPathInfo.moduleName}`,
+      '--nometadata',
+    ],
+    commandPathInfo.projectCurrent,
+  );
+  // metadata
+  invokeToolsMetadata(
+    commandPathInfo.moduleName,
+    commandPathInfo.projectCurrent,
+  );
+  // open
+  const fileDest = path.join(
+    commandPathInfo.moduleRoot,
+    `src/controller/${name}.ts`,
   );
   showTextDocument(path.join(commandPathInfo.projectCurrent, fileDest));
 }
