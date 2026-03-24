@@ -11,6 +11,7 @@ const esbuildProblemMatcherPlugin = {
 
   setup(build) {
     build.onStart(() => {
+      // eslint-disable-next-line no-console no-unlimited-disable
       console.log('[watch] build started');
     });
     build.onEnd(result => {
@@ -20,6 +21,7 @@ const esbuildProblemMatcherPlugin = {
           `    ${location.file}:${location.line}:${location.column}:`,
         );
       });
+      // eslint-disable-next-line no-console no-unlimited-disable
       console.log('[watch] build finished');
     });
   },

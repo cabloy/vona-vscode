@@ -169,7 +169,7 @@ export class Commands {
   }
 }
 
-function wrapperCommand(command, fn) {
+function wrapperCommand(_command, fn) {
   return async function (...args) {
     try {
       await fn(...args);

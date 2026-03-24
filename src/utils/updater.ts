@@ -1,15 +1,12 @@
 import semver from 'semver';
+
+import { invokePnpmCli, invokeVonaCli } from './commands.js';
 import { getRegistry } from './registry.js';
 import { getWorkspaceRootDirectory } from './vona.js';
-import { invokePnpmCli, invokeVonaCli } from './commands.js';
 
 export async function checkIfUpdateCli() {
   try {
-    const res = await invokeVonaCli(
-      ['--version'],
-      getWorkspaceRootDirectory(),
-      true,
-    );
+    const res = await invokeVonaCli(['--version'], getWorkspaceRootDirectory(), true);
     const versionOld = res.trimEnd();
     let needUpdate;
     if (!semver.valid(versionOld)) {
@@ -23,20 +20,15 @@ export async function checkIfUpdateCli() {
       needUpdate = lt;
     }
     if (needUpdate) {
-      invokePnpmCli(
-        ['add', '-g', 'vona-cli@latest'],
-        getWorkspaceRootDirectory(),
-      );
+      invokePnpmCli(['add', '-g', 'vona-cli@latest'], getWorkspaceRootDirectory());
       // newTerminal(`pnpm add -g vona-cli@latest`, getWorkspaceRootDirectory());
     }
   } catch (err) {
     if (err.code === 'ENOENT' || err.code === 10127) {
-      invokePnpmCli(
-        ['add', '-g', 'vona-cli@latest'],
-        getWorkspaceRootDirectory(),
-      );
+      invokePnpmCli(['add', '-g', 'vona-cli@latest'], getWorkspaceRootDirectory());
       // newTerminal(`pnpm add -g vona-cli@latest`, getWorkspaceRootDirectory());
     } else {
+      // eslint-disable-next-line
       console.log(err);
     }
   }
