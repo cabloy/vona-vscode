@@ -1,12 +1,10 @@
-import { ExtensionContext, window, Disposable } from 'vscode';
+import { Disposable, ExtensionContext, window } from 'vscode';
 import {
   getProjectInfo,
-  getWorkspaceRootDirectory,
   getVonaProjectCurrent,
   isVonaProject,
   setProjectInfo,
 } from '../utils/vona.js';
-import path from 'node:path';
 
 export class TextEditorWatchers {
   context: ExtensionContext;
@@ -17,7 +15,7 @@ export class TextEditorWatchers {
   }
 
   start() {
-    this.textEditorDisposable = window.onDidChangeActiveTextEditor((e) => {
+    this.textEditorDisposable = window.onDidChangeActiveTextEditor(e => {
       this._checkProjectCurrent(e.document.uri.fsPath);
     });
     // check immediately

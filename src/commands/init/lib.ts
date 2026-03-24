@@ -1,4 +1,4 @@
-import { Uri, window } from 'vscode';
+import { Uri } from 'vscode';
 import {
   extractCommandPathInfo,
   preparePathResource,
@@ -20,14 +20,14 @@ export async function initLib(resource?: Uri) {
   // invoke
   await invokeVonaCli(
     [':init:lib', commandPathInfo.moduleName, '--nometadata'],
-    commandPathInfo.projectCurrent
+    commandPathInfo.projectCurrent,
   );
   // metadata
   invokeToolsMetadata(
     commandPathInfo.moduleName,
-    commandPathInfo.projectCurrent
+    commandPathInfo.projectCurrent,
   );
   // open
-  const fileDest = path.join(commandPathInfo.moduleRoot, `src/lib/index.ts`);
+  const fileDest = path.join(commandPathInfo.moduleRoot, 'src/lib/index.ts');
   showTextDocument(path.join(commandPathInfo.projectCurrent, fileDest));
 }

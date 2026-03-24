@@ -16,15 +16,15 @@ export class FileWatchers {
 
   start() {
     this.rootWatcher = workspace.createFileSystemWatcher(
-      new RelativePattern(getWorkspaceRootDirectory(), '**/*')
+      new RelativePattern(getWorkspaceRootDirectory(), '**/*'),
     );
-    this.rootWatcher.onDidCreate((uri) => {
+    this.rootWatcher.onDidCreate(uri => {
       console.log('create:', uri);
     });
-    this.rootWatcher.onDidChange((uri) => {
+    this.rootWatcher.onDidChange(uri => {
       console.log('change:', uri);
     });
-    this.rootWatcher.onDidDelete((uri) => {
+    this.rootWatcher.onDidDelete(uri => {
       console.log('delete:', uri);
     });
   }

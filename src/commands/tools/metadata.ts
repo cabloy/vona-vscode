@@ -26,7 +26,7 @@ export async function toolsMetadata(resource?: Uri) {
   if (commandPathInfo.moduleName) {
     const fileDest = path.join(
       commandPathInfo.moduleRoot,
-      `src/.metadata/index.ts`,
+      'src/.metadata/index.ts',
     );
     showTextDocument(path.join(commandPathInfo.projectCurrent, fileDest));
   } else {
@@ -51,7 +51,7 @@ export async function toolsCrud(resource?: Uri) {
   // invoke
   await invokeVonaCli(
     [
-      `:tools:crud`,
+      ':tools:crud',
       name,
       `--module=${commandPathInfo.moduleName}`,
       '--nometadata',
@@ -88,7 +88,7 @@ export async function toolsCrudCabloy(resource?: Uri) {
   // invoke
   await invokeVonaCli(
     [
-      `:tools:crudCabloy`,
+      ':tools:crudCabloy',
       name,
       `--module=${commandPathInfo.moduleName}`,
       '--nometadata',

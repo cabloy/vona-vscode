@@ -1,4 +1,4 @@
-import { Uri, window } from 'vscode';
+import { Uri } from 'vscode';
 import {
   extractCommandPathInfo,
   preparePathResource,
@@ -20,17 +20,17 @@ export async function initLocale(resource?: Uri) {
   // invoke
   await invokeVonaCli(
     [':init:locale', commandPathInfo.moduleName, '--nometadata'],
-    commandPathInfo.projectCurrent
+    commandPathInfo.projectCurrent,
   );
   // metadata
   invokeToolsMetadata(
     commandPathInfo.moduleName,
-    commandPathInfo.projectCurrent
+    commandPathInfo.projectCurrent,
   );
   // open
   const fileDest = path.join(
     commandPathInfo.moduleRoot,
-    `src/config/locale/en-us.ts`
+    'src/config/locale/en-us.ts',
   );
   showTextDocument(path.join(commandPathInfo.projectCurrent, fileDest));
 }

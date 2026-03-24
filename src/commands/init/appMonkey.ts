@@ -1,4 +1,4 @@
-import { Uri, window } from 'vscode';
+import { Uri } from 'vscode';
 import {
   extractCommandPathInfo,
   preparePathResource,
@@ -17,6 +17,6 @@ export async function initAppMonkey(resource?: Uri) {
   // invoke
   await invokeVonaCli([':init:appMonkey'], commandPathInfo.projectCurrent);
   // open
-  const fileDest = `src/backend/config/monkey.ts`;
+  const fileDest = 'src/backend/config/monkey.ts';
   showTextDocument(path.join(commandPathInfo.projectCurrent, fileDest));
 }

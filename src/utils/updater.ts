@@ -1,6 +1,5 @@
 import semver from 'semver';
 import { getRegistry } from './registry.js';
-import { newTerminal } from './global.js';
 import { getWorkspaceRootDirectory } from './vona.js';
 import { invokePnpmCli, invokeVonaCli } from './commands.js';
 
@@ -9,7 +8,7 @@ export async function checkIfUpdateCli() {
     const res = await invokeVonaCli(
       ['--version'],
       getWorkspaceRootDirectory(),
-      true
+      true,
     );
     const versionOld = res.trimEnd();
     let needUpdate;
@@ -26,7 +25,7 @@ export async function checkIfUpdateCli() {
     if (needUpdate) {
       invokePnpmCli(
         ['add', '-g', 'vona-cli@latest'],
-        getWorkspaceRootDirectory()
+        getWorkspaceRootDirectory(),
       );
       // newTerminal(`pnpm add -g vona-cli@latest`, getWorkspaceRootDirectory());
     }
@@ -34,7 +33,7 @@ export async function checkIfUpdateCli() {
     if (err.code === 'ENOENT' || err.code === 10127) {
       invokePnpmCli(
         ['add', '-g', 'vona-cli@latest'],
-        getWorkspaceRootDirectory()
+        getWorkspaceRootDirectory(),
       );
       // newTerminal(`pnpm add -g vona-cli@latest`, getWorkspaceRootDirectory());
     } else {

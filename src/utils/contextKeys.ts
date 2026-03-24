@@ -21,14 +21,14 @@ export class ContextKeys {
     vscode.commands.executeCommand(
       'setContext',
       'vona.hasVonaProject',
-      !!projectInfo
+      !!projectInfo,
     );
     // vona.currentVonaProject
     if (projectInfo && !projectInfo.isMulti) {
       vscode.commands.executeCommand(
         'setContext',
         'vona.currentVonaProject',
-        projectInfo.directoryCurrent
+        projectInfo.directoryCurrent,
       );
     }
     // more keys
@@ -44,19 +44,19 @@ export class ContextKeys {
     // arrayProjectRoot
     const workspaceFolder = getWorkspaceRootDirectory();
     const arrayProjectRoot = projectInfo.isMulti
-      ? projectInfo.projectNames.map((item) => path.join(workspaceFolder, item))
+      ? projectInfo.projectNames.map(item => path.join(workspaceFolder, item))
       : [workspaceFolder];
     // vona.arrayProjectRoot
     vscode.commands.executeCommand(
       'setContext',
       'vona.arrayProjectRoot',
-      arrayProjectRoot
+      arrayProjectRoot,
     );
     // vona.arrayProjectSrc
     vscode.commands.executeCommand(
       'setContext',
       'vona.arrayProjectSrc',
-      arrayProjectRoot.map((item) => path.join(item, 'src'))
+      arrayProjectRoot.map(item => path.join(item, 'src')),
     );
   }
 }

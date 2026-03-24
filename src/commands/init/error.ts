@@ -1,4 +1,4 @@
-import { Uri, window } from 'vscode';
+import { Uri } from 'vscode';
 import {
   extractCommandPathInfo,
   preparePathResource,
@@ -20,17 +20,17 @@ export async function initError(resource?: Uri) {
   // invoke
   await invokeVonaCli(
     [':init:error', commandPathInfo.moduleName, '--nometadata'],
-    commandPathInfo.projectCurrent
+    commandPathInfo.projectCurrent,
   );
   // metadata
   invokeToolsMetadata(
     commandPathInfo.moduleName,
-    commandPathInfo.projectCurrent
+    commandPathInfo.projectCurrent,
   );
   // open
   const fileDest = path.join(
     commandPathInfo.moduleRoot,
-    `src/config/errors.ts`
+    'src/config/errors.ts',
   );
   showTextDocument(path.join(commandPathInfo.projectCurrent, fileDest));
 }

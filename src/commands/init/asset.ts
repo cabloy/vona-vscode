@@ -4,8 +4,6 @@ import {
   preparePathResource,
 } from '../../utils/vona.js';
 import { invokeVonaCli } from '../../utils/commands.js';
-import path from 'node:path';
-import { showTextDocument } from '../../utils/global.js';
 
 export async function initAsset(resource?: Uri) {
   const { fsPath } = preparePathResource(resource);
@@ -27,7 +25,7 @@ export async function initAsset(resource?: Uri) {
   // invoke
   await invokeVonaCli(
     [':init:asset', scene, `--module=${commandPathInfo.moduleName}`],
-    commandPathInfo.projectCurrent
+    commandPathInfo.projectCurrent,
   );
   // // open
   // const fileDest = path.join(commandPathInfo.moduleRoot, `static/img/vona.png`);

@@ -1,11 +1,10 @@
-import { Uri, window, workspace } from 'vscode';
+import { Uri, window } from 'vscode';
 import {
   combineCliResourcePath,
   extractCommandPathInfo,
   preparePathResource,
   trimPathPrefixs,
 } from '../../utils/vona.js';
-import { LocalConsole } from '../../utils/console.js';
 import path from 'node:path';
 import { invokeToolsMetadata, invokeVonaCli } from '../../utils/commands.js';
 import { showTextDocument } from '../../utils/global.js';
@@ -18,7 +17,7 @@ export async function beanAopMethod(resource: Uri) {
   await beanGeneral_common(
     resource,
     'aopMethod',
-    'What is the aop method bean name?'
+    'What is the aop method bean name?',
   );
 }
 
@@ -26,7 +25,7 @@ export async function beanMiddleware(resource: Uri) {
   await beanGeneral_common(
     resource,
     'middleware',
-    'What is the middleware bean name?'
+    'What is the middleware bean name?',
   );
 }
 
@@ -36,7 +35,7 @@ export async function beanMiddlewareGlobal(resource: Uri) {
     'middleware',
     'What is the middleware global bean name?',
     undefined,
-    'global'
+    'global',
   );
 }
 
@@ -44,7 +43,7 @@ export async function beanMiddlewareSystem(resource: Uri) {
   await beanGeneral_common(
     resource,
     'middlewareSystem',
-    'What is the middlewareSystem bean name?'
+    'What is the middlewareSystem bean name?',
   );
 }
 
@@ -58,7 +57,7 @@ export async function beanGuardGlobal(resource: Uri) {
     'guard',
     'What is the guard global bean name?',
     undefined,
-    'global'
+    'global',
   );
 }
 
@@ -66,7 +65,7 @@ export async function beanInterceptor(resource: Uri) {
   await beanGeneral_common(
     resource,
     'interceptor',
-    'What is the interceptor bean name?'
+    'What is the interceptor bean name?',
   );
 }
 
@@ -76,7 +75,7 @@ export async function beanInterceptorGlobal(resource: Uri) {
     'interceptor',
     'What is the interceptor global bean name?',
     undefined,
-    'global'
+    'global',
   );
 }
 
@@ -90,7 +89,7 @@ export async function beanPipeGlobal(resource: Uri) {
     'pipe',
     'What is the pipe global bean name?',
     undefined,
-    'global'
+    'global',
   );
 }
 
@@ -104,7 +103,7 @@ export async function beanFilterGlobal(resource: Uri) {
     'filter',
     'What is the filter global bean name?',
     undefined,
-    'global'
+    'global',
   );
 }
 
@@ -112,7 +111,7 @@ export async function beanSocketNamespace(resource: Uri) {
   await beanGeneral_common(
     resource,
     'socketNamespace',
-    'What is the socket namespace bean name?'
+    'What is the socket namespace bean name?',
   );
 }
 
@@ -120,7 +119,7 @@ export async function beanSocketConnection(resource: Uri) {
   await beanGeneral_common(
     resource,
     'socketConnection',
-    'What is the socket connection bean name?'
+    'What is the socket connection bean name?',
   );
 }
 
@@ -128,7 +127,7 @@ export async function beanSocketPacket(resource: Uri) {
   await beanGeneral_common(
     resource,
     'socketPacket',
-    'What is the socket packet bean name?'
+    'What is the socket packet bean name?',
   );
 }
 
@@ -137,7 +136,7 @@ export async function beanMetaIndex(resource: Uri) {
     resource,
     'meta',
     'What is the meta index bean name?',
-    'index'
+    'index',
   );
 }
 
@@ -146,7 +145,7 @@ export async function beanMetaVersion(resource: Uri) {
     resource,
     'meta',
     'What is the meta version bean name?',
-    'version'
+    'version',
   );
 }
 
@@ -155,7 +154,7 @@ export async function beanMetaStatus(resource: Uri) {
     resource,
     'meta',
     'What is the meta status bean name?',
-    'status'
+    'status',
   );
 }
 
@@ -164,7 +163,7 @@ export async function beanMetaRedlock(resource: Uri) {
     resource,
     'meta',
     'What is the meta redlock bean name?',
-    'redlock'
+    'redlock',
   );
 }
 
@@ -173,7 +172,7 @@ export async function beanMetaElection(resource: Uri) {
     resource,
     'meta',
     'What is the meta election bean name?',
-    'election'
+    'election',
   );
 }
 
@@ -182,7 +181,7 @@ export async function beanMetaStatic(resource: Uri) {
     resource,
     'meta',
     'What is the meta static bean name?',
-    'static'
+    'static',
   );
 }
 
@@ -191,7 +190,7 @@ export async function beanMetaAsset(resource: Uri) {
     resource,
     'meta',
     'What is the meta asset bean name?',
-    'asset'
+    'asset',
   );
 }
 
@@ -200,7 +199,7 @@ export async function beanMetaPrintTip(resource: Uri) {
     resource,
     'meta',
     'What is the meta printTip bean name?',
-    'printTip'
+    'printTip',
   );
 }
 
@@ -209,7 +208,7 @@ export async function beanMetaRuntime(resource: Uri) {
     resource,
     'meta',
     'What is the meta runtime bean name?',
-    'runtime'
+    'runtime',
   );
 }
 
@@ -217,7 +216,7 @@ export async function beanSummerCache(resource: Uri) {
   await beanGeneral_common(
     resource,
     'summerCache',
-    'What is the summer cache bean name?'
+    'What is the summer cache bean name?',
   );
 }
 
@@ -225,7 +224,7 @@ export async function beanSsrSite(resource: Uri) {
   await beanGeneral_common(
     resource,
     'ssrSite',
-    'What is the ssr site bean name?'
+    'What is the ssr site bean name?',
   );
 }
 
@@ -233,7 +232,7 @@ export async function beanSsrMenuGroup(resource: Uri) {
   await beanGeneral_common(
     resource,
     'ssrMenuGroup',
-    'What is the ssr menu group bean name?'
+    'What is the ssr menu group bean name?',
   );
 }
 
@@ -241,7 +240,7 @@ export async function beanSsrMenu(resource: Uri) {
   await beanGeneral_common(
     resource,
     'ssrMenu',
-    'What is the ssr menu bean name?'
+    'What is the ssr menu bean name?',
   );
 }
 
@@ -249,7 +248,7 @@ export async function beanStartup(resource: Uri) {
   await beanGeneral_common(
     resource,
     'startup',
-    'What is the startup bean name?'
+    'What is the startup bean name?',
   );
 }
 
@@ -261,7 +260,7 @@ export async function beanBroadcast(resource: Uri) {
   await beanGeneral_common(
     resource,
     'broadcast',
-    'What is the broadcast bean name?'
+    'What is the broadcast bean name?',
   );
 }
 
@@ -269,7 +268,7 @@ export async function beanSchedule(resource: Uri) {
   await beanGeneral_common(
     resource,
     'schedule',
-    'What is the schedule bean name?'
+    'What is the schedule bean name?',
   );
 }
 
@@ -281,7 +280,7 @@ export async function beanEventListener(resource: Uri) {
   await beanGeneral_common(
     resource,
     'eventListener',
-    'What is the eventListener bean name?'
+    'What is the eventListener bean name?',
   );
 }
 
@@ -289,7 +288,7 @@ export async function beanDatabaseDialect(resource: Uri) {
   await beanGeneral_common(
     resource,
     'databaseDialect',
-    'What is the databaseDialect bean name?'
+    'What is the databaseDialect bean name?',
   );
 }
 
@@ -297,7 +296,7 @@ export async function beanCacheMem(resource: Uri) {
   await beanGeneral_common(
     resource,
     'cacheMem',
-    'What is the cacheMem bean name?'
+    'What is the cacheMem bean name?',
   );
 }
 
@@ -305,7 +304,7 @@ export async function beanCacheRedis(resource: Uri) {
   await beanGeneral_common(
     resource,
     'cacheRedis',
-    'What is the cacheRedis bean name?'
+    'What is the cacheRedis bean name?',
   );
 }
 
@@ -313,7 +312,7 @@ export async function beanAuthProvider(resource: Uri) {
   await beanGeneral_common(
     resource,
     'authProvider',
-    'What is the authProvider bean name?'
+    'What is the authProvider bean name?',
   );
 }
 
@@ -321,7 +320,7 @@ export async function beanCaptchaProvider(resource: Uri) {
   await beanGeneral_common(
     resource,
     'captchaProvider',
-    'What is the captchaProvider bean name?'
+    'What is the captchaProvider bean name?',
   );
 }
 
@@ -329,7 +328,7 @@ export async function beanCaptchaScene(resource: Uri) {
   await beanGeneral_common(
     resource,
     'captchaScene',
-    'What is the captchaScene bean name?'
+    'What is the captchaScene bean name?',
   );
 }
 
@@ -337,7 +336,7 @@ export async function beanZodRefine(resource: Uri) {
   await beanGeneral_common(
     resource,
     'zodRefine',
-    'What is the zodRefine bean name?'
+    'What is the zodRefine bean name?',
   );
 }
 
@@ -345,7 +344,7 @@ export async function beanZodTransform(resource: Uri) {
   await beanGeneral_common(
     resource,
     'zodTransform',
-    'What is the zodTransform bean name?'
+    'What is the zodTransform bean name?',
   );
 }
 
@@ -353,7 +352,7 @@ export async function beanSerializerTransform(resource: Uri) {
   await beanGeneral_common(
     resource,
     'serializerTransform',
-    'What is the serializerTransform bean name?'
+    'What is the serializerTransform bean name?',
   );
 }
 
@@ -361,7 +360,7 @@ export async function beanFilterTransform(resource: Uri) {
   await beanGeneral_common(
     resource,
     'filterTransform',
-    'What is the filterTransform bean name?'
+    'What is the filterTransform bean name?',
   );
 }
 
@@ -389,7 +388,7 @@ export async function createServiceGlobal(resource: Uri) {
   await beanGeneral_common(
     resource,
     'bean',
-    'What is the global service name?'
+    'What is the global service name?',
   );
 }
 
@@ -397,7 +396,7 @@ export async function createController(resource: Uri) {
   await beanGeneral_common(
     resource,
     'controller',
-    'What is the controller name?'
+    'What is the controller name?',
   );
 }
 
@@ -406,7 +405,7 @@ export async function beanGeneral_common(
   sceneName: string,
   prompt: string,
   name?: string,
-  boilerplate?: string
+  boilerplate?: string,
 ) {
   const { fromPalette, fsPath } = preparePathResource(resource);
   if (!fsPath) {
@@ -427,25 +426,25 @@ export async function beanGeneral_common(
   // pathResource
   const pathResource = trimPathPrefixs(
     combineCliResourcePath(commandPathInfo.pathResource, name),
-    [`src/${sceneName}/`, 'src/bean/', 'src/']
+    [`src/${sceneName}/`, 'src/bean/', 'src/'],
   );
   // invoke
   // const commandName = sceneName === 'bean' ? 'general' : sceneName;
   await invokeVonaCli(
     [
-      `:create:bean`,
+      ':create:bean',
       sceneName,
       pathResource,
       `--module=${commandPathInfo.moduleName}`,
       `--boilerplate=${boilerplate || ''}`,
       '--nometadata',
     ],
-    commandPathInfo.projectCurrent
+    commandPathInfo.projectCurrent,
   );
   // metadata
   invokeToolsMetadata(
     commandPathInfo.moduleName,
-    commandPathInfo.projectCurrent
+    commandPathInfo.projectCurrent,
   );
   // open
   let fileDestScene = [
