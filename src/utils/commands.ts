@@ -1,4 +1,8 @@
+import { ProcessHelper } from '@cabloy/process-helper';
+import { existsSync } from 'fs-extra';
+import path from 'node:path';
 import { commands, ExtensionContext, window } from 'vscode';
+
 import {
   beanAop,
   beanAopMethod,
@@ -53,31 +57,24 @@ import {
   createServiceGlobal,
   createController,
 } from '../commands/create/bean.js';
-import { logger } from './outputChannel.js';
-import { LocalConsole } from './console.js';
-import { ProcessHelper } from '@cabloy/process-helper';
-import { getWorkspaceRootDirectory } from './vona.js';
-import { existsSync } from 'fs-extra';
-import path from 'node:path';
-import {
-  toolsCrud,
-  toolsCrudCabloy,
-  toolsMetadata,
-} from '../commands/tools/metadata.js';
-import { initConfig } from '../commands/init/config.js';
-import { initConstant } from '../commands/init/constant.js';
-import { initLocale } from '../commands/init/locale.js';
-import { initError } from '../commands/init/error.js';
-import { initMonkey } from '../commands/init/monkey.js';
-import { initMain } from '../commands/init/main.js';
-import { initStatic } from '../commands/init/static.js';
-import { initAsset } from '../commands/init/asset.js';
-import { initLib } from '../commands/init/lib.js';
-import { initTypes } from '../commands/init/types.js';
-import { initAppMonkey } from '../commands/init/appMonkey.js';
 import { createModule } from '../commands/create/module.js';
 import { createSuite } from '../commands/create/suite.js';
 import { createTest } from '../commands/create/test.js';
+import { initAppMonkey } from '../commands/init/appMonkey.js';
+import { initAsset } from '../commands/init/asset.js';
+import { initConfig } from '../commands/init/config.js';
+import { initConstant } from '../commands/init/constant.js';
+import { initError } from '../commands/init/error.js';
+import { initLib } from '../commands/init/lib.js';
+import { initLocale } from '../commands/init/locale.js';
+import { initMain } from '../commands/init/main.js';
+import { initMonkey } from '../commands/init/monkey.js';
+import { initStatic } from '../commands/init/static.js';
+import { initTypes } from '../commands/init/types.js';
+import { toolsCrud, toolsCrudCabloy, toolsMetadata } from '../commands/tools/metadata.js';
+import { LocalConsole } from './console.js';
+import { logger } from './outputChannel.js';
+import { getWorkspaceRootDirectory } from './vona.js';
 
 const extensionCommands = [
   // create
@@ -168,12 +165,7 @@ export class Commands {
 
   initialize() {
     for (const { command, function: commandFunction } of extensionCommands) {
-      this.context.subscriptions.push(
-        commands.registerCommand(
-          command,
-          wrapperCommand(command, commandFunction),
-        ),
-      );
+      this.context.subscriptions.push(commands.registerCommand(command, wrapperCommand(command, commandFunction)));
     }
   }
 }
@@ -190,33 +182,21 @@ function wrapperCommand(command, fn) {
   };
 }
 
-export async function invokeToolsMetadata(
-  moduleName: string,
-  projectCurrent: string,
-) {
+export async function invokeToolsMetadata(moduleName: string, projectCurrent: string) {
   // tools.metadata
   await invokeVonaCli([':tools:metadata', moduleName], projectCurrent);
 }
 
-export async function invokeVonaCli(
-  args: string[],
-  projectCurrent: string,
-  forceGlobalCli?: boolean,
-) {
+export async function invokeVonaCli(args: string[], projectCurrent: string, forceGlobalCli?: boolean) {
   const console = new LocalConsole();
   const processHelper = new ProcessHelper(projectCurrent, console);
   const workspaceFolder = getWorkspaceRootDirectory();
   args = args.concat('--vscode');
   let res;
-  if (
-    !forceGlobalCli &&
-    existsSync(path.join(workspaceFolder, 'packages-cli'))
-  ) {
+  if (!forceGlobalCli && existsSync(path.join(workspaceFolder, 'packages-cli'))) {
     res = await processHelper.spawnExe({
       cmd: 'node',
-      args: [
-        path.join(workspaceFolder, 'packages-cli/cli/src/bin/vona.ts'),
-      ].concat(args),
+      args: [path.join(workspaceFolder, 'packages-cli/cli/src/bin/vona.ts')].concat(args),
       options: {
         stdio: 'pipe',
         cwd: projectCurrent,
