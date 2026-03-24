@@ -194,7 +194,7 @@ export async function invokeToolsMetadata(
   moduleName: string,
   projectCurrent: string,
 ) {
-  // tools.deps
+  // tools.metadata
   await invokeVonaCli([':tools:metadata', moduleName], projectCurrent);
 }
 
