@@ -1,11 +1,9 @@
-import { Uri, window } from 'vscode';
-import {
-  extractCommandPathInfo,
-  preparePathResource,
-} from '../../utils/vona.js';
-import { invokeToolsMetadata, invokeVonaCli } from '../../utils/commands.js';
 import path from 'node:path';
+import { Uri, window } from 'vscode';
+
+import { invokeToolsMetadata, invokeVonaCli } from '../../utils/commands.js';
 import { showTextDocument } from '../../utils/global.js';
+import { extractCommandPathInfo, preparePathResource } from '../../utils/vona.js';
 
 export async function toolsMetadata(resource?: Uri) {
   const { fsPath } = preparePathResource(resource);
@@ -24,10 +22,7 @@ export async function toolsMetadata(resource?: Uri) {
   await invokeVonaCli(args, commandPathInfo.projectCurrent);
   // open
   if (commandPathInfo.moduleName) {
-    const fileDest = path.join(
-      commandPathInfo.moduleRoot,
-      'src/.metadata/index.ts',
-    );
+    const fileDest = path.join(commandPathInfo.moduleRoot, 'src/.metadata/index.ts');
     showTextDocument(path.join(commandPathInfo.projectCurrent, fileDest));
   } else {
     window.showInformationMessage('Generate .metadata successfully!');
@@ -49,29 +44,15 @@ export async function toolsCrud(resource?: Uri) {
   // commandPathInfo
   const commandPathInfo = extractCommandPathInfo(fsPath);
   // invoke
-  await invokeVonaCli(
-    [
-      ':tools:crud',
-      name,
-      `--module=${commandPathInfo.moduleName}`,
-      '--nometadata',
-    ],
-    commandPathInfo.projectCurrent,
-  );
+  await invokeVonaCli([':tools:crud', name, `--module=${commandPathInfo.moduleName}`, '--nometadata'], commandPathInfo.projectCurrent);
   // metadata
-  invokeToolsMetadata(
-    commandPathInfo.moduleName,
-    commandPathInfo.projectCurrent,
-  );
+  invokeToolsMetadata(commandPathInfo.moduleName, commandPathInfo.projectCurrent);
   // open
-  const fileDest = path.join(
-    commandPathInfo.moduleRoot,
-    `src/controller/${name}.ts`,
-  );
+  const fileDest = path.join(commandPathInfo.moduleRoot, `src/controller/${name}.ts`);
   showTextDocument(path.join(commandPathInfo.projectCurrent, fileDest));
 }
 
-export async function toolsCrudCabloy(resource?: Uri) {
+export async function toolsCrudBasic(resource?: Uri) {
   const { fsPath } = preparePathResource(resource);
   if (!fsPath) {
     return;
@@ -86,24 +67,10 @@ export async function toolsCrudCabloy(resource?: Uri) {
   // commandPathInfo
   const commandPathInfo = extractCommandPathInfo(fsPath);
   // invoke
-  await invokeVonaCli(
-    [
-      ':tools:crudCabloy',
-      name,
-      `--module=${commandPathInfo.moduleName}`,
-      '--nometadata',
-    ],
-    commandPathInfo.projectCurrent,
-  );
+  await invokeVonaCli([':tools:crudBasic', name, `--module=${commandPathInfo.moduleName}`, '--nometadata'], commandPathInfo.projectCurrent);
   // metadata
-  invokeToolsMetadata(
-    commandPathInfo.moduleName,
-    commandPathInfo.projectCurrent,
-  );
+  invokeToolsMetadata(commandPathInfo.moduleName, commandPathInfo.projectCurrent);
   // open
-  const fileDest = path.join(
-    commandPathInfo.moduleRoot,
-    `src/controller/${name}.ts`,
-  );
+  const fileDest = path.join(commandPathInfo.moduleRoot, `src/controller/${name}.ts`);
   showTextDocument(path.join(commandPathInfo.projectCurrent, fileDest));
 }

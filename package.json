@@ -393,7 +393,7 @@
         "category": "Vona Tools"
       },
       {
-        "command": "vona.toolsCrudCabloy",
+        "command": "vona.toolsCrud",
         "title": "Generate Crud",
         "category": "Vona Tools"
       }
@@ -669,7 +669,7 @@
           "when": "vona.hasVonaProject && vona.currentVonaProject"
         },
         {
-          "command": "vona.toolsCrudCabloy",
+          "command": "vona.toolsCrud",
           "when": "vona.hasVonaProject && vona.currentVonaProject"
         }
       ],
@@ -991,7 +991,7 @@
           "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath in vona.arrayProjectRoot || resourcePath in vona.arrayProjectSrc || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)\\.metadata$/)"
         },
         {
-          "command": "vona.toolsCrudCabloy",
+          "command": "vona.toolsCrud",
           "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/)"
         }
       ]

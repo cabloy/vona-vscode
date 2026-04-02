@@ -71,7 +71,7 @@ import { initMain } from '../commands/init/main.js';
 import { initMonkey } from '../commands/init/monkey.js';
 import { initStatic } from '../commands/init/static.js';
 import { initTypes } from '../commands/init/types.js';
-import { toolsCrud, toolsCrudCabloy, toolsMetadata } from '../commands/tools/metadata.js';
+import { toolsCrud, toolsCrudBasic, toolsMetadata } from '../commands/tools/metadata.js';
 import { LocalConsole } from './console.js';
 import { getWorkspaceRootDirectory } from './vona.js';
 
@@ -152,7 +152,7 @@ const extensionCommands = [
   // tools
   { command: 'vona.toolsMetadata', function: toolsMetadata },
   { command: 'vona.toolsCrud', function: toolsCrud },
-  { command: 'vona.toolsCrudCabloy', function: toolsCrudCabloy },
+  { command: 'vona.toolsCrudBasic', function: toolsCrudBasic },
 ];
 
 export class Commands {
