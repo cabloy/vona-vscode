@@ -1,10 +1,7 @@
 import { Disposable, ExtensionContext, window } from 'vscode';
-import {
-  getProjectInfo,
-  getVonaProjectCurrent,
-  isVonaProject,
-  setProjectInfo,
-} from '../utils/vona.js';
+import * as vscode from 'vscode';
+
+import { getVonaProjectCurrent } from '../utils/vona.js';
 
 export class TextEditorWatchers {
   context: ExtensionContext;
@@ -30,17 +27,8 @@ export class TextEditorWatchers {
   }
 
   _checkProjectCurrent(file: string) {
-    const projectInfo = getProjectInfo();
-    if (!projectInfo.isMulti) {
-      // do nothing
-      return;
-    }
-    // multi
-    const projectFolder = getVonaProjectCurrent(file);
-    if (isVonaProject(projectFolder)) {
-      setProjectInfo({ directoryCurrent: projectFolder });
-    } else {
-      setProjectInfo({ directoryCurrent: undefined });
-    }
+    const projectCurrent = getVonaProjectCurrent(file);
+    if (!projectCurrent) return;
+    vscode.commands.executeCommand('setContext', 'vona.currentVonaProject', projectCurrent);
   }
 }

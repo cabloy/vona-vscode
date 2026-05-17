@@ -1,10 +1,7 @@
-import * as vscode from 'vscode';
-import {
-  getWorkspaceRootDirectory,
-  hasVonaProject,
-  IProjectInfo,
-} from './vona.js';
 import path from 'node:path';
+import * as vscode from 'vscode';
+
+import { hasVonaProject, IProjectInfo } from './vona.js';
 
 export class ContextKeys {
   async initialize() {
@@ -18,19 +15,7 @@ export class ContextKeys {
   async _setProjectInfo() {
     const projectInfo = await hasVonaProject();
     // vona.hasVonaProject
-    vscode.commands.executeCommand(
-      'setContext',
-      'vona.hasVonaProject',
-      !!projectInfo,
-    );
-    // vona.currentVonaProject
-    if (projectInfo && !projectInfo.isMulti) {
-      vscode.commands.executeCommand(
-        'setContext',
-        'vona.currentVonaProject',
-        projectInfo.directoryCurrent,
-      );
-    }
+    vscode.commands.executeCommand('setContext', 'vona.hasVonaProject', !!projectInfo);
     // more keys
     await this._setMoreKeys(projectInfo);
     // ok
@@ -38,25 +23,16 @@ export class ContextKeys {
   }
 
   async _setMoreKeys(projectInfo?: IProjectInfo) {
-    if (!projectInfo) {
+    if (!projectInfo || !projectInfo.projectPaths) {
       return;
     }
-    // arrayProjectRoot
-    const workspaceFolder = getWorkspaceRootDirectory();
-    const arrayProjectRoot = projectInfo.isMulti
-      ? projectInfo.projectNames.map(item => path.join(workspaceFolder, item))
-      : [workspaceFolder];
     // vona.arrayProjectRoot
-    vscode.commands.executeCommand(
-      'setContext',
-      'vona.arrayProjectRoot',
-      arrayProjectRoot,
-    );
+    vscode.commands.executeCommand('setContext', 'vona.arrayProjectRoot', projectInfo.projectPaths);
     // vona.arrayProjectSrc
     vscode.commands.executeCommand(
       'setContext',
       'vona.arrayProjectSrc',
-      arrayProjectRoot.map(item => path.join(item, 'src')),
+      projectInfo.projectPaths.map(item => path.join(item, 'src')),
     );
   }
 }
