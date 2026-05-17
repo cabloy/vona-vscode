@@ -43,7 +43,7 @@
     "semver": "^7.6.2"
   },
   "devDependencies": {
-    "@cabloy/lint": "^5.1.14",
+    "@cabloy/lint": "^5.1.15",
     "@types/fs-extra": "^11.0.4",
     "@types/mocha": "^10.0.7",
     "@types/node": "20.x",
@@ -51,10 +51,6 @@
     "@vscode/test-cli": "^0.0.12",
     "@vscode/test-electron": "^2.4.0",
     "esbuild": "^0.21.5",
-    "eslint-plugin-antfu": "^3.2.3",
-    "eslint-plugin-jsonc": "^3.1.2",
-    "eslint-plugin-perfectionist": "^5.9.0",
-    "eslint-plugin-yml": "^3.3.2",
     "npm-run-all": "^4.1.5",
     "oxfmt": "^0.41.0",
     "oxlint": "^1.56.0",
