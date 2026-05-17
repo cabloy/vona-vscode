@@ -1,13 +1,9 @@
-import { Uri, window } from 'vscode';
-import {
-  combineCliResourcePath,
-  extractCommandPathInfo,
-  preparePathResource,
-  trimPathPrefixs,
-} from '../../utils/vona.js';
 import path from 'node:path';
+import { Uri, window } from 'vscode';
+
 import { invokeVonaCli } from '../../utils/commands.js';
 import { showTextDocument } from '../../utils/global.js';
+import { combineCliResourcePath, extractCommandPathInfo, preparePathResource, trimPathPrefixs } from '../../utils/vona.js';
 
 export async function createModule(resource?: Uri) {
   const { fromPalette, fsPath } = preparePathResource(resource);
@@ -27,19 +23,9 @@ export async function createModule(resource?: Uri) {
     commandPathInfo.pathResource = 'src/module';
   }
   // pathResource
-  const pathResource = trimPathPrefixs(
-    combineCliResourcePath(commandPathInfo.pathResource, name),
-    ['src/'],
-  );
+  const pathResource = trimPathPrefixs(combineCliResourcePath(commandPathInfo.pathResource, name), ['src/']);
   // invoke
-  await invokeVonaCli(
-    [
-      ':create:module',
-      pathResource,
-      `--suite=${commandPathInfo.suiteName || ''}`,
-    ],
-    commandPathInfo.projectCurrent,
-  );
+  await invokeVonaCli([':create:module', pathResource, `--suite=${commandPathInfo.suiteName || ''}`], commandPathInfo.projectCurrent);
   // post
   _postCreateModule(commandPathInfo.projectCurrent);
   // open
