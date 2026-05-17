@@ -1,7 +1,7 @@
 {
   "name": "vona-vscode",
   "displayName": "Vona - Official",
-  "version": "0.0.99",
+  "version": "0.0.100",
   "description": "An extension for Vona offering commands and tools to make your experience more pleasant.",
   "categories": [
     "Programming Languages",
