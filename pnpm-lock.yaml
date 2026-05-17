@@ -25,8 +25,8 @@ importers:
         version: 7.8.0
     devDependencies:
       '@cabloy/lint':
-        specifier: ^5.1.11
-        version: 5.1.11(@typescript-eslint/rule-tester@8.59.3(eslint@10.4.0)(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.59.3(typescript@5.9.3))(@typescript-eslint/utils@8.59.3(eslint@10.4.0)(typescript@5.9.3))(eslint@10.4.0)(oxlint@1.65.0)(typescript@5.9.3)(vue-eslint-parser@10.4.0(eslint@10.4.0))
+        specifier: ^5.1.12
+        version: 5.1.12(@typescript-eslint/rule-tester@8.59.3(eslint@10.4.0)(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.59.3(typescript@5.9.3))(@typescript-eslint/utils@8.59.3(eslint@10.4.0)(typescript@5.9.3))(eslint@10.4.0)(oxlint@1.65.0)(typescript@5.9.3)(vue-eslint-parser@10.4.0(eslint@10.4.0))
       '@types/fs-extra':
         specifier: ^11.0.4
         version: 11.0.4
@@ -67,8 +67,8 @@ packages:
     resolution: {integrity: sha512-6zABk/ECA/QYSCQ1NGiVwwbQerUCZ+TQbp64Q3AgmfNvurHH0j8TtXa1qbShXA6qqkpAj4V5W8pP6mLe1mcMqA==}
     engines: {node: '>=18'}
 
-  '@cabloy/lint@5.1.11':
-    resolution: {integrity: sha512-2FwoCVzko8NUMWxDxbKarQgx+pcOKegvOV1toDnPbe+B9K3FnGuW2O2ewW87AoSOwp6Rk38YK9gO8/yEzHVQ3g==}
+  '@cabloy/lint@5.1.12':
+    resolution: {integrity: sha512-OFrxgtT2ehikzArAhKgzI0AUibXCTaMA5ITEphUgQnAjUx31Ra1SgwITekPnvsp/5Oq5GDVH04DmZspkhbr6Og==}
 
   '@cabloy/process-helper@2.0.25':
     resolution: {integrity: sha512-iOd8TtfC2+LIDYZ0KzgrhOIb0MD+R4hxMDUQ24zEhduZCfZniUL+feSJD0uxSOb0ec1mo5DO3ogohYsNcRgE6w==}
@@ -357,6 +357,10 @@ packages:
   '@npmcli/promise-spawn@9.0.1':
     resolution: {integrity: sha512-OLUaoqBuyxeTqUvjA3FZFiXUfYC1alp3Sa99gW3EUDz3tZ3CbXDdcZ7qWKBzicrJleIgucoWamWH1saAmH/l2Q==}
     engines: {node: ^20.17.0 || >=22.9.0}
+
+  '@ota-meshi/ast-token-store@0.3.0':
+    resolution: {integrity: sha512-XRO0zi2NIUKq2lUk3T1ecFSld1fMWRKE6naRFGkgkdeosx7IslyUKNv5Dcb5PJTja9tHJoFu0v/7yEpAkrkrTg==}
+    engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
   '@oxfmt/binding-android-arm-eabi@0.41.0':
     resolution: {integrity: sha512-REfrqeMKGkfMP+m/ScX4f5jJBSmVNYcpoDF8vP8f8eYPDuPGZmzp56NIUsYmx3h7f6NzC6cE3gqh8GDWrJHCKw==}
@@ -1061,6 +1065,12 @@ packages:
     resolution: {integrity: sha512-dxmt9r3zvPaft6IugS4i0k16xag3fTbOvm/road5uV9Y8qUCQT0xzheSh3gMlYAlC6vXRpfArBDsTZ7H7JKCbg==}
     peerDependencies:
       eslint: ^9.0.0 || ^10.0.0
+
+  eslint-plugin-toml@1.3.1:
+    resolution: {integrity: sha512-1l00fBP03HIt9IPV7ZxBi7x0y0NMdEZmakL1jBD6N/FoKBvfKxPw5S8XkmzBecOnFBTn5Z8sNJtL5vdf9cpRMQ==}
+    engines: {node: ^20.19.0 || ^22.13.0 || >=24}
+    peerDependencies:
+      eslint: '>=9.38.0'
 
   eslint-plugin-vue@10.9.1:
     resolution: {integrity: sha512-cHB0Tf4Duvzwecwd/AqWzZvF/QszE13BhjVUpVXWCy9AeMR5GjkAjP3i85vqgLgOuTmkHR1OJ5oMeqLHtuw8zg==}
@@ -2193,6 +2203,10 @@ packages:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
 
+  toml-eslint-parser@1.0.3:
+    resolution: {integrity: sha512-A5F0cM6+mDleacLIEUkmfpkBbnHJFV1d2rprHU2MXNk7mlxHq2zGojA+SRvQD1RoMo9gqjZPWEaKG4v1BQ48lw==}
+    engines: {node: ^20.19.0 || ^22.13.0 || >=24}
+
   ts-api-utils@2.5.0:
     resolution: {integrity: sha512-OJ/ibxhPlqrMM0UiNHJ/0CKQkoKF243/AEmplt3qpRgkW8VG7IfOS41h7V8TjITqdByHzrjcS/2si+y4lIh8NA==}
     engines: {node: '>=18.12'}
@@ -2370,7 +2384,7 @@ snapshots:
 
   '@bcoe/v8-coverage@1.0.2': {}
 
-  '@cabloy/lint@5.1.11(@typescript-eslint/rule-tester@8.59.3(eslint@10.4.0)(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.59.3(typescript@5.9.3))(@typescript-eslint/utils@8.59.3(eslint@10.4.0)(typescript@5.9.3))(eslint@10.4.0)(oxlint@1.65.0)(typescript@5.9.3)(vue-eslint-parser@10.4.0(eslint@10.4.0))':
+  '@cabloy/lint@5.1.12(@typescript-eslint/rule-tester@8.59.3(eslint@10.4.0)(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.59.3(typescript@5.9.3))(@typescript-eslint/utils@8.59.3(eslint@10.4.0)(typescript@5.9.3))(eslint@10.4.0)(oxlint@1.65.0)(typescript@5.9.3)(vue-eslint-parser@10.4.0(eslint@10.4.0))':
     dependencies:
       '@e18e/eslint-plugin': 0.2.0(eslint@10.4.0)(oxlint@1.65.0)
       '@eslint/json': 1.2.0
@@ -2380,6 +2394,7 @@ snapshots:
       eslint-plugin-command: 3.5.2(@typescript-eslint/rule-tester@8.59.3(eslint@10.4.0)(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.59.3(typescript@5.9.3))(@typescript-eslint/utils@8.59.3(eslint@10.4.0)(typescript@5.9.3))(eslint@10.4.0)
       eslint-plugin-eslint-comments: 3.2.0(eslint@10.4.0)
       eslint-plugin-pnpm: 1.6.0(eslint@10.4.0)
+      eslint-plugin-toml: 1.3.1(eslint@10.4.0)
       eslint-plugin-vue: 10.9.1(@stylistic/eslint-plugin@5.10.0(eslint@10.4.0))(@typescript-eslint/parser@8.59.3(eslint@10.4.0)(typescript@5.9.3))(eslint@10.4.0)(vue-eslint-parser@10.4.0(eslint@10.4.0))
       globals: 17.6.0
       typescript-eslint: 8.59.3(eslint@10.4.0)(typescript@5.9.3)
@@ -2640,6 +2655,8 @@ snapshots:
   '@npmcli/promise-spawn@9.0.1':
     dependencies:
       which: 6.0.1
+
+  '@ota-meshi/ast-token-store@0.3.0': {}
 
   '@oxfmt/binding-android-arm-eabi@0.41.0':
     optional: true
@@ -3358,6 +3375,17 @@ snapshots:
       tinyglobby: 0.2.16
       yaml: 2.9.0
       yaml-eslint-parser: 2.0.0
+
+  eslint-plugin-toml@1.3.1(eslint@10.4.0):
+    dependencies:
+      '@eslint/core': 1.2.1
+      '@eslint/plugin-kit': 0.6.1
+      '@ota-meshi/ast-token-store': 0.3.0
+      debug: 4.4.3(supports-color@8.1.1)
+      eslint: 10.4.0
+      toml-eslint-parser: 1.0.3
+    transitivePeerDependencies:
+      - supports-color
 
   eslint-plugin-vue@10.9.1(@stylistic/eslint-plugin@5.10.0(eslint@10.4.0))(@typescript-eslint/parser@8.59.3(eslint@10.4.0)(typescript@5.9.3))(eslint@10.4.0)(vue-eslint-parser@10.4.0(eslint@10.4.0)):
     dependencies:
@@ -4779,6 +4807,10 @@ snapshots:
   to-regex-range@5.0.1:
     dependencies:
       is-number: 7.0.0
+
+  toml-eslint-parser@1.0.3:
+    dependencies:
+      eslint-visitor-keys: 5.0.1
 
   ts-api-utils@2.5.0(typescript@5.9.3):
     dependencies:
