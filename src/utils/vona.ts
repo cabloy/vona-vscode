@@ -58,9 +58,8 @@ export function getVonaProjectCurrent(resource: string) {
   const workspaceFolder = getWorkspaceRootDirectory();
   while (true) {
     if (!resource || !resource.startsWith(workspaceFolder)) return;
-    resource = path.dirname(resource);
-    if (!resource || !resource.startsWith(workspaceFolder)) return;
     if (isVonaProject(resource)) return resource;
+    resource = path.dirname(resource);
   }
 }
 
