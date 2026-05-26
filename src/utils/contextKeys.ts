@@ -26,12 +26,11 @@ export class ContextKeys {
     if (!projectInfo || !projectInfo.projectPath) {
       return;
     }
-    // vona.projectPath/projectSrcPath
-    vscode.commands.executeCommand('setContext', 'vona.projectPath', projectInfo.projectPath);
-    vscode.commands.executeCommand(
-      'setContext',
-      'vona.projectSrcPath',
-      path.join(projectInfo.projectPath, 'src'),
-    );
+    // vona.arrayProjectRoot/arrayProjectSrc
+    vscode.commands.executeCommand('setContext', 'vona.arrayProjectRoot', [
+      projectInfo.projectPath,
+    ]);
+    const projectSrcPath = path.join(projectInfo.projectPath, 'src');
+    vscode.commands.executeCommand('setContext', 'vona.arrayProjectSrc', [projectSrcPath]);
   }
 }

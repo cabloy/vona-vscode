@@ -404,37 +404,37 @@
         {
           "submenu": "vona.create",
           "group": "navigation",
-          "when": "vona.hasVonaProject"
+          "when": "vona.hasVonaProject && resourcePath =~ /(\\/|\\\\)vona(\\/|\\\\)/"
         },
         {
           "submenu": "vona.aspect",
           "group": "navigation",
-          "when": "vona.hasVonaProject"
+          "when": "vona.hasVonaProject && resourcePath =~ /(\\/|\\\\)vona(\\/|\\\\)/"
         },
         {
           "submenu": "vona.bean",
           "group": "navigation",
-          "when": "vona.hasVonaProject"
+          "when": "vona.hasVonaProject && resourcePath =~ /(\\/|\\\\)vona(\\/|\\\\)/"
         },
         {
           "submenu": "vona.meta",
           "group": "navigation",
-          "when": "vona.hasVonaProject"
+          "when": "vona.hasVonaProject && resourcePath =~ /(\\/|\\\\)vona(\\/|\\\\)/"
         },
         {
           "submenu": "vona.init",
           "group": "navigation",
-          "when": "vona.hasVonaProject"
+          "when": "vona.hasVonaProject && resourcePath =~ /(\\/|\\\\)vona(\\/|\\\\)/"
         },
         {
           "submenu": "vona.refactor",
           "group": "navigation",
-          "when": "vona.hasVonaProject"
+          "when": "vona.hasVonaProject && resourcePath =~ /(\\/|\\\\)vona(\\/|\\\\)/"
         },
         {
           "submenu": "vona.tools",
           "group": "navigation",
-          "when": "vona.hasVonaProject"
+          "when": "vona.hasVonaProject && resourcePath =~ /(\\/|\\\\)vona(\\/|\\\\)/"
         }
       ],
       "vona.create": [
@@ -708,14 +708,14 @@
         },
         {
           "command": "vona.initAppMonkey",
-          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath == vona.projectPath || resourcePath == vona.projectSrcPath)"
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath in vona.arrayProjectRoot || resourcePath in vona.arrayProjectSrc)"
         }
       ],
       "vona.refactor": [],
       "vona.tools": [
         {
           "command": "vona.toolsMetadata",
-          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath == vona.projectPath || resourcePath == vona.projectSrcPath || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)\\.metadata$/)"
+          "when": "vona.hasVonaProject && explorerResourceIsFolder && (resourcePath in vona.arrayProjectRoot || resourcePath in vona.arrayProjectSrc || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+$/ || resourcePath =~ /(\\/|\\\\)module(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)module-vendor(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath =~ /(\\/|\\\\)modules(\\/|\\\\)[^(\\/|\\\\)]+(\\/|\\\\)src$/ || resourcePath=~ /src(\\/|\\\\)\\.metadata$/)"
         },
         {
           "command": "vona.toolsCrud",
