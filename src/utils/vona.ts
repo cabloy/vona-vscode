@@ -13,11 +13,11 @@ export interface ICommandPathInfo {
 }
 
 export interface IProjectInfo {
-  projectPath?: string;
+  projectPaths?: string[];
 }
 
 const _projectInfo: IProjectInfo = {
-  projectPath: undefined,
+  projectPaths: undefined,
 };
 
 export function getWorkspaceRootDirectory(): string {
@@ -48,10 +48,9 @@ export async function hasVonaProject(): Promise<IProjectInfo | undefined> {
     ignore: ['**/node_modules/**'],
   });
   if (files.length === 0) return;
-  _projectInfo.projectPath = path.join(workspaceFolder, path.dirname(files[0]));
-  // _projectInfo.projectPaths = files.map(item => {
-  //   return path.join(workspaceFolder, path.dirname(item));
-  // });
+  _projectInfo.projectPaths = files.map(item => {
+    return path.join(workspaceFolder, path.dirname(item));
+  });
   return _projectInfo;
 }
 

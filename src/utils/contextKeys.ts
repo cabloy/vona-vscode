@@ -23,14 +23,16 @@ export class ContextKeys {
   }
 
   async _setMoreKeys(projectInfo?: IProjectInfo) {
-    if (!projectInfo || !projectInfo.projectPath) {
+    if (!projectInfo || !projectInfo.projectPaths) {
       return;
     }
-    // vona.arrayProjectRoot/arrayProjectSrc
-    vscode.commands.executeCommand('setContext', 'vona.arrayProjectRoot', [
-      projectInfo.projectPath,
-    ]);
-    const projectSrcPath = path.join(projectInfo.projectPath, 'src');
-    vscode.commands.executeCommand('setContext', 'vona.arrayProjectSrc', [projectSrcPath]);
+    // vona.arrayProjectRoot
+    vscode.commands.executeCommand('setContext', 'vona.arrayProjectRoot', projectInfo.projectPaths);
+    // vona.arrayProjectSrc
+    vscode.commands.executeCommand(
+      'setContext',
+      'vona.arrayProjectSrc',
+      projectInfo.projectPaths.map(item => path.join(item, 'src')),
+    );
   }
 }
