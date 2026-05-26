@@ -404,37 +404,37 @@
         {
           "submenu": "vona.create",
           "group": "navigation",
-          "when": "vona.hasVonaProject && resourcePath =~ /(\\/|\\\\)vona(\\/|\\\\)/"
+          "when": "vona.hasVonaProject && (resourcePath =~ /(\\/|\\\\)vona(\\/|\\\\)/ || resourcePath =~ /(\\/|\\\\)vona$/)"
         },
         {
           "submenu": "vona.aspect",
           "group": "navigation",
-          "when": "vona.hasVonaProject && resourcePath =~ /(\\/|\\\\)vona(\\/|\\\\)/"
+          "when": "vona.hasVonaProject && (resourcePath =~ /(\\/|\\\\)vona(\\/|\\\\)/ || resourcePath =~ /(\\/|\\\\)vona$/)"
         },
         {
           "submenu": "vona.bean",
           "group": "navigation",
-          "when": "vona.hasVonaProject && resourcePath =~ /(\\/|\\\\)vona(\\/|\\\\)/"
+          "when": "vona.hasVonaProject && (resourcePath =~ /(\\/|\\\\)vona(\\/|\\\\)/ || resourcePath =~ /(\\/|\\\\)vona$/)"
         },
         {
           "submenu": "vona.meta",
           "group": "navigation",
-          "when": "vona.hasVonaProject && resourcePath =~ /(\\/|\\\\)vona(\\/|\\\\)/"
+          "when": "vona.hasVonaProject && (resourcePath =~ /(\\/|\\\\)vona(\\/|\\\\)/ || resourcePath =~ /(\\/|\\\\)vona$/)"
         },
         {
           "submenu": "vona.init",
           "group": "navigation",
-          "when": "vona.hasVonaProject && resourcePath =~ /(\\/|\\\\)vona(\\/|\\\\)/"
+          "when": "vona.hasVonaProject && (resourcePath =~ /(\\/|\\\\)vona(\\/|\\\\)/ || resourcePath =~ /(\\/|\\\\)vona$/)"
         },
         {
           "submenu": "vona.refactor",
           "group": "navigation",
-          "when": "vona.hasVonaProject && resourcePath =~ /(\\/|\\\\)vona(\\/|\\\\)/"
+          "when": "vona.hasVonaProject && (resourcePath =~ /(\\/|\\\\)vona(\\/|\\\\)/ || resourcePath =~ /(\\/|\\\\)vona$/)"
         },
         {
           "submenu": "vona.tools",
           "group": "navigation",
-          "when": "vona.hasVonaProject && resourcePath =~ /(\\/|\\\\)vona(\\/|\\\\)/"
+          "when": "vona.hasVonaProject && (resourcePath =~ /(\\/|\\\\)vona(\\/|\\\\)/ || resourcePath =~ /(\\/|\\\\)vona$/)"
         }
       ],
       "vona.create": [
