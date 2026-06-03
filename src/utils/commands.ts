@@ -75,7 +75,6 @@ import { initStatic } from '../commands/init/static.js';
 import { initTypes } from '../commands/init/types.js';
 import { toolsCrud, toolsCrudBasic, toolsMetadata } from '../commands/tools/metadata.js';
 import { LocalConsole } from './console.js';
-import { getWorkspaceRootDirectory } from './vona.js';
 
 const extensionCommands = [
   // create
@@ -199,13 +198,12 @@ export async function invokeVonaCli(
 ) {
   const console = new LocalConsole();
   const processHelper = new ProcessHelper(projectCurrent, console);
-  const workspaceFolder = getWorkspaceRootDirectory();
   args = args.concat('--vscode');
   let res;
-  if (!forceGlobalCli && existsSync(path.join(workspaceFolder, 'packages-cli'))) {
+  if (!forceGlobalCli && existsSync(path.join(projectCurrent, 'packages-cli'))) {
     res = await processHelper.spawnExe({
       cmd: 'node',
-      args: [path.join(workspaceFolder, 'packages-cli/cli/src/bin/vona.ts')].concat(args),
+      args: [path.join(projectCurrent, 'packages-cli/cli/src/bin/vona.ts')].concat(args),
       options: {
         stdio: 'pipe',
         cwd: projectCurrent,
