@@ -45,6 +45,8 @@ import {
   beanSocketPacket,
   beanSsrMenu,
   beanSsrMenuGroup,
+  beanSsrMenuGroupWeb,
+  beanSsrMenuWeb,
   beanSsrSite,
   beanStartup,
   beanSummerCache,
@@ -107,6 +109,8 @@ const extensionCommands = [
   { command: 'vona.beanSsrSite', function: beanSsrSite },
   { command: 'vona.beanSsrMenuGroup', function: beanSsrMenuGroup },
   { command: 'vona.beanSsrMenu', function: beanSsrMenu },
+  { command: 'vona.beanSsrMenuGroupWeb', function: beanSsrMenuGroupWeb },
+  { command: 'vona.beanSsrMenuWeb', function: beanSsrMenuWeb },
   { command: 'vona.beanStartup', function: beanStartup },
   { command: 'vona.beanQueue', function: beanQueue },
   { command: 'vona.beanBroadcast', function: beanBroadcast },
@@ -164,7 +168,9 @@ export class Commands {
 
   initialize() {
     for (const { command, function: commandFunction } of extensionCommands) {
-      this.context.subscriptions.push(commands.registerCommand(command, wrapperCommand(command, commandFunction)));
+      this.context.subscriptions.push(
+        commands.registerCommand(command, wrapperCommand(command, commandFunction)),
+      );
     }
   }
 }
@@ -186,7 +192,11 @@ export async function invokeToolsMetadata(moduleName: string, projectCurrent: st
   await invokeVonaCli([':tools:metadata', moduleName], projectCurrent);
 }
 
-export async function invokeVonaCli(args: string[], projectCurrent: string, forceGlobalCli?: boolean) {
+export async function invokeVonaCli(
+  args: string[],
+  projectCurrent: string,
+  forceGlobalCli?: boolean,
+) {
   const console = new LocalConsole();
   const processHelper = new ProcessHelper(projectCurrent, console);
   const workspaceFolder = getWorkspaceRootDirectory();
